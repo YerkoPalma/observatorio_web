@@ -1,9 +1,9 @@
 <div class="row about-images">
 	<div class="col-md-6">
-		<?php echo $this->Html->image('logo_diinf.png', array('url' => 'http://www.informatica.usach.cl/')); ?>		
+		<?php echo $this->Html->image('logo_diinf.png', array('url' => 'http://www.informatica.usach.cl/', 'id' => 'info_img')); ?>		
 	</div>
 	<div class="col-md-6">
-		<?php echo $this->Html->image('logo_usach.png', array('url' => 'http://www.usach.cl/')); ?>		
+		<?php echo $this->Html->image('logo_usach.png', array('url' => 'http://www.usach.cl/', 'id' => 'usach_img')); ?>		
 	</div>
 </div>
 <br><br>
@@ -13,7 +13,7 @@
 	</div>
 </div>
 <ul class="nav nav-pills">
-	<li><a target="_blank" href="http://www.fing.usach.cl/sitioFING/index.php/alumnos-41/carreras/42-facultad/carreras/190-ingenieria-civil-informatica">Informática</a></li>
-	<li><a target="_blank" href="http://www.fing.usach.cl/sitioFING/images/mallas/ing_civil_informatica.pdf">Malla</a></li>
-	<li><a target="_blank" href="http://www.fing.usach.cl/sitioFING/">Ingeniería</a></li>
+	<li><a href="http://www.fing.usach.cl/sitioFING/index.php/alumnos-41/carreras/42-facultad/carreras/190-ingenieria-civil-informatica">Informática</a></li>
+	<li><a href="http://www.fing.usach.cl/sitioFING/images/mallas/ing_civil_informatica.pdf">Malla</a></li>
+	<li><a href="http://www.fing.usach.cl/sitioFING/">Ingeniería</a></li>
 </ul>
