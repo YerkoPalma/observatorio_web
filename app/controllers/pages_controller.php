@@ -5,6 +5,10 @@
 		var $uses = null;
 		var $components = array('Email');
 
+		function beforeFilter() {
+	    parent::beforeFilter();
+	    $this->Auth->allowedActions = array('*');
+		}
 		function home(){	
 			$this->set('title_for_layout', 'Proyectos Ingeniería Civil Informática | Home');		
 		}
@@ -29,7 +33,7 @@
 				$this->Email->subject = $this->data['subject'];
 				$this->Email->send( $this->data['message'] );				
 
-        $this->Session->setFlash($this->data, 'flash_success');
+        $this->Session->setFlash('Su mensaje ha sido enviado correctamente', 'flash_success');
         $this->redirect(array('action' => 'contact'));
 	    } else {
 	        // Save logic goes here

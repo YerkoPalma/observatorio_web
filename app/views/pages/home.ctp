@@ -16,6 +16,6 @@
 
 <div class="row">
 	<div class="col-md-12">
-		<h3 class="text-center">¿Aún no tienes una cuenta? <?php echo $this->Html->link('¡Registraté!', array('controller' => 'users', 'action' => 'new'), array('class' => 'btn btn-lg btn-primary'))?></h3>
+		<h3 class="text-center">¿Aún no tienes una cuenta? <?php echo $this->Html->link('¡Registraté!', array('controller' => 'users', 'action' => 'add'), array('class' => 'btn btn-lg btn-primary'))?></h3>
 	</div>
 </div>

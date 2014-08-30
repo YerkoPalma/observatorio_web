@@ -82,3 +82,64 @@ body > .container {
   padding-left: 5%;
   border-left: solid 1px #777;
 }
+
+.avatar{
+  max-height: 50px;
+  max-width: 250px;
+  padding-left: 5px;
+}
+
+.avatar:hover{
+  background-color: #555;
+  color: #fff;
+}
+
+.avatar:hover a{
+  color: #fff !important;
+}
+
+.online-usr{
+  width: 20%;
+}
+
+li.dropdown:hover{
+  background-color: #555;
+}
+
+li.dropdown .divider{
+  padding: 0;
+}
+.avatar img{
+  max-height: 40px;
+  max-width: 40px;
+}
+
+.avatar a {
+  display: inline-block !important;
+}
+
+.navbar-nav>li>.dropdown-menu {
+  max-width: 200px;
+}
+
+.panel-title{
+  text-align: center;
+}
+
+.socials{
+  padding: 0 30%;
+}
+
+.socials img:first-child{
+  height: 30px;
+  width: 30px;
+}
+
+.socials img:last-child{
+  height: 30px;
+  width: 40px;
+}
+
+.socials img{
+  margin: 5px;
+}

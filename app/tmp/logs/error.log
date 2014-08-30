@@ -39,3 +39,32 @@
 2014-08-09 00:39:16 Error: Fatal Error (256): ConnectionManager::loadDataSource - Unable to import DataSource class .Database/postgresSource in [/var/www/observatorio/cake/libs/model/connection_manager.php, line 185]
 2014-08-09 00:39:16 Error: Fatal Error (256): ConnectionManager::loadDataSource - Unable to import DataSource class .Database/postgresSource in [/var/www/observatorio/cake/libs/model/connection_manager.php, line 185]
 2014-08-09 00:41:43 Error: Fatal Error (256): ConnectionManager::loadDataSource - Unable to import DataSource class .Database/postgresSource in [/var/www/observatorio/cake/libs/model/connection_manager.php, line 185]
+2014-08-24 17:38:46 Error: Fatal Error (256): ConnectionManager::loadDataSource - Unable to import DataSource class .Database/postgresSource in [/var/www/observatorio/cake/libs/model/connection_manager.php, line 185]
+2014-08-24 17:38:58 Error: Fatal Error (256): ConnectionManager::loadDataSource - Unable to import DataSource class .Database/postgresSource in [/var/www/observatorio/cake/libs/model/connection_manager.php, line 185]
+2014-08-24 19:16:19 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  null value in column "users_id" violates not-null constraint in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-08-24 19:16:19 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  null value in column "users_id" violates not-null constraint</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-08-24 19:29:12 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  relation "users_id_seq" does not exist
+LINE 1: SELECT currval('users_id_seq') as max
+                       ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-08-24 19:29:12 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  relation "users_id_seq" does not exist
+LINE 1: SELECT currval('users_id_seq') as max
+                       ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-08-24 19:53:09 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  null value in column "id" violates not-null constraint in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-08-24 19:53:09 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  null value in column "id" violates not-null constraint</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-08-24 20:09:51 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  relation "users_id_seq" does not exist
+LINE 1: SELECT currval('users_id_seq') as max
+                       ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-08-24 20:09:51 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  relation "users_id_seq" does not exist
+LINE 1: SELECT currval('users_id_seq') as max
+                       ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-08-24 20:24:41 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  currval of sequence "users_id_seq" is not yet defined in this session in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-08-24 20:24:41 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  currval of sequence "users_id_seq" is not yet defined in this session</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-08-24 22:49:58 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  currval of sequence "users_id_seq" is not yet defined in this session in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-08-24 22:49:58 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  currval of sequence "users_id_seq" is not yet defined in this session</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-08-24 22:51:41 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  currval of sequence "users_id_seq" is not yet defined in this session in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-08-24 22:51:41 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  currval of sequence "users_id_seq" is not yet defined in this session</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-08-24 22:51:41 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-08-26 22:35:52 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  currval of sequence "users_id_seq" is not yet defined in this session in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-08-26 22:35:52 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  currval of sequence "users_id_seq" is not yet defined in this session</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-08-26 22:35:52 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-08-29 18:57:42 Warning: Warning (512): Could not find AclComponent. Please include Acl in Controller::$components. in [/var/www/observatorio/cake/libs/controller/components/auth.php, line 422]

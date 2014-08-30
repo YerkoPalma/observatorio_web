@@ -65,11 +65,6 @@ class PagesViewsTest extends CakeWebTestCase {
     $this->assertTitle(new PatternExpectation('/INGENIERÍA CIVIL INFORMÁTICA/'));
     //volvemos a la pagina de inicio
     $this->back();
-    
-    $this->clickLink("Informática");
-    $this->assertTitle(new PatternExpectation('/INGENIERÍA CIVIL INFORMÁTICA/'));
-    //volvemos a la pagina de inicio
-    $this->back();
     $this->clickLink("Malla");
     //Se trata de un archivo en PDF por lo que no se puede probar el titulo
     //volvemos a la pagina de inicio
