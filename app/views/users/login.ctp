@@ -20,13 +20,9 @@
 					    </div>
 					    <div class="form-group">
 					    	<label for="exampleInputEmail1">Contraseña</label>
-					    	<?php echo $form->input('contrasena', array('type' => 'password', 'class' => 'form-control'));?>
+					    	<?php echo $form->input('password', array('type' => 'password', 'class' => 'form-control'));?>
 					    </div>
-					    <div class="checkbox">
-						    <label>
-						      <input type="checkbox"> Check me out
-						    </label>
-						  </div>
+					    
 						  <?php echo $this->Form->submit('Login',array('class'=>'btn btn-primary', 'div' => false)); ?>
 						  <?php echo $this->Html->link('Olvide mi contraseña', array('controller' => 'users', 'action' => 'recover'), array('style' => 'padding-left: 25px;')); ?>
 					    <?php echo $form->end();?>

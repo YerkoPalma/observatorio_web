@@ -1,0 +1,23 @@
+<?php $user = current($this->Session->read('current_user'));
+	  $avatar = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user['mail'] ) ) ) . "&s=40";?>
+
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="<?php echo $avatar; ?>" alt="" class="img-thumbnail" />
+				</div>
+				<div class="col-md-8">
+					<h2><?php echo $user['nombre']?></h2>
+					<?php echo $html->link('Ver perfil', array('controller' => 'users', 'action' => 'show', $user['users_id']))?><br>
+					<?php echo $html->link('Editar perfil', array('controller' => 'users', 'action' => 'edit', $user['users_id']))?>
+				</div>
+			</div>
+			<hr>
+			<div class="btn-group-vertical">
+				<?php echo $html->link('Ideas', array('controller' => 'ideas', 'action' => 'index'), array('class' => 'btn btn-default btn-block'))?>
+			  <?php echo $html->link('Proyecto', array('controller' => 'users', 'action' => 'project'), array('class' => 'btn btn-default btn-block'))?>
+			  <?php echo $html->link('Curso', array('controller' => 'ideas', 'action' => 'index'), array('class' => 'btn btn-default btn-block'))?>
+			</div>
+		</div>
+	</div>	

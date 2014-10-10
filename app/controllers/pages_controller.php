@@ -3,7 +3,9 @@
 	Class PagesController extends AppController {
 		var $name = 'Pages';
 		var $uses = null;
-		var $components = array('Email');
+		var $helpers = array('Html');
+		var $components = array('Email','Auth', 'Session');
+
 
 		function beforeFilter() {
 	    parent::beforeFilter();

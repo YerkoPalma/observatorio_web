@@ -20,6 +20,7 @@
       <?php if( $this->Session->read('current_user') ):
         $user = current($this->Session->read('current_user'));
         $avatar = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user['mail'] ) ) ) . "&s=40";
+        
         ?>
 
         <ul class="nav navbar-nav navbar-right online-usr">
@@ -39,7 +40,8 @@
           </li>
                 
         </ul>
-      <?php else: ?>
+      
+      <?php else: ?>  
       <ul class="nav navbar-nav navbar-right">
         <li><?php echo $this->Html->link('Home', array('controller' => 'pages', 'action' => 'home'))?></li>
         <li><?php echo $this->Html->link('Help', array('controller' => 'pages', 'action' => 'help'))?></li>

@@ -143,3 +143,30 @@ li.dropdown .divider{
 .socials img{
   margin: 5px;
 }
+
+.side-bar h2{
+  margin: 0;
+}
+
+.side-bar img{
+  max-width: 200%;
+  width: 125%;
+}
+
+.btn-group-vertical{
+  width: 100%;
+}
+
+.page-header{
+  margin: 0;
+  padding: 2%;
+  background-color: #fef;
+  border-color: #ddd;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-bottom-width: 4px;
+  border-bottom-color: #f0ad4e;
+}

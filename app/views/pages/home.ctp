@@ -1,4 +1,16 @@
+<?php 	if( $this->Session->read('current_user') ): ?>
+	<?php $user = null;?>
+	<?php $user = current($this->Session->read('current_user'));?>
+	<div class="row">
+		<div class="col-md-3 side-bar">
+			<?php echo $this->element('sidebar');?>
+		</div>
 
+		<div class="col-md-9">
+					
+		</div>
+	</div>
+<?php else:?>
 <div class="row divider">
 	<div class="col-md-4">
 		<?php echo $this->Html->image('lightbulb.png', array('class' => 'img img-responsive'))?>
@@ -19,3 +31,4 @@
 		<h3 class="text-center">¿Aún no tienes una cuenta? <?php echo $this->Html->link('¡Registraté!', array('controller' => 'users', 'action' => 'add'), array('class' => 'btn btn-lg btn-primary'))?></h3>
 	</div>
 </div>
+<?php endif; ?>

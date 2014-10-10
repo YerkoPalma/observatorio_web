@@ -21,7 +21,14 @@
   <div class="container">
     <?php echo $this->Session->flash(); ?>
     <!-- Aquí es donde quiero que se vean mis vistas -->
-    <?php echo $content_for_layout ?>
+    <div class="row">
+      <div class="col-md-3 side-bar">
+        <?php echo $this->element('sidebar');?>
+      </div>
+      <div class="col-md-9">
+        <?php echo $content_for_layout ?>
+      </div>
+    </div>
   </div>
   <!-- Añadir un pie de página a cada página mostrada -->
   <?php echo $this->element('sql_dump')?>

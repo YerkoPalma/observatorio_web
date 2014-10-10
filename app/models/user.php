@@ -19,7 +19,7 @@ class User extends AppModel{
         'message' => 'Entre 5 y 15 caracteres'
       )
     ),
-    'contrasena' => array(
+    'password' => array(
       'rule' => array('minLength', '5'),
       'message' => 'Largo mínimo de 5 caracteres',
       'allowEmpty' => 'false'
