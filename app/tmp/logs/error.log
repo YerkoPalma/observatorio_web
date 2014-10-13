@@ -1621,3 +1621,236 @@ LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
                                                              ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
 2014-10-10 00:49:48 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
 2014-10-10 00:50:07 Warning: Warning (2): current() expects parameter 1 to be array, null given in [/var/www/observatorio/app/views/elements/sidebar.ctp, line 1]
+2014-10-10 00:53:31 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-10 00:53:31 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-10 00:53:31 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-10 00:53:35 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-10 00:53:35 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-10 00:53:35 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-10 00:53:39 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-10 00:53:39 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-10 00:53:39 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-10 00:53:43 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-10 00:53:43 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-10 00:53:43 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-10 00:55:32 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-10 00:55:32 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-10 00:55:32 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-10 00:55:34 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-10 00:55:34 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-10 00:55:34 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-10 00:55:35 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-10 00:55:35 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-10 00:55:35 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-10 00:56:42 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-10 00:56:42 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-10 00:56:42 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-10 00:57:55 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-10 00:57:55 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-10 00:57:55 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 22:12:26 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:12:26 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:12:26 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-12 22:12:27 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:12:27 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:12:27 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 22:26:01 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:26:01 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:26:01 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 22:32:00 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:32:00 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:32:00 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 22:36:11 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:36:11 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:36:11 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 22:36:43 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:36:43 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:36:43 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 22:37:40 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:37:40 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:37:40 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 22:38:37 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:38:37 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:38:37 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-12 22:38:38 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:38:38 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:38:38 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 22:38:41 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:38:41 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:38:41 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-12 22:38:43 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:38:43 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:38:43 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-12 22:38:45 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:38:45 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:38:45 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 22:38:51 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:38:51 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:38:51 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-12 22:40:09 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:40:09 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:40:09 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-12 22:40:11 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:40:11 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:40:11 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 22:40:12 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 22:40:12 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 22:40:12 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-12 23:13:00 Warning: Warning (2): current() expects parameter 1 to be array, null given in [/var/www/observatorio/app/views/elements/sidebar.ctp, line 1]
+2014-10-12 23:13:00 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 23:13:00 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 23:13:00 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 23:13:00 Warning: Warning (2): current() expects parameter 1 to be array, null given in [/var/www/observatorio/app/views/elements/sidebar.ctp, line 1]
+2014-10-12 23:13:04 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 23:13:04 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 23:13:04 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 23:13:05 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 23:13:05 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 23:13:05 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-12 23:16:00 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 23:16:00 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 23:16:00 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-12 23:16:03 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 23:16:03 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 23:16:03 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 23:16:07 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 23:16:07 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...ROM "users" AS "User"   WHERE "User"."users_id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 23:16:07 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 86]
+2014-10-12 23:16:11 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 23:16:11 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 23:16:11 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
+2014-10-12 23:22:21 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-10-12 23:22:21 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...M "users" AS "User"   WHERE "User"."users_id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-10-12 23:22:21 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 77]
