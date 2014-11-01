@@ -1,3 +1,3 @@
 <div class="alert alert-success" role="alert">
-  <?php echo print_r($message); ?>
+  <?php echo $message; ?>
 </div>

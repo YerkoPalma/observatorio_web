@@ -12,6 +12,7 @@
   
   <?php echo $this->Html->script('jquery.min'); ?>
   <?php echo $this->Html->script('bootstrap.min'); ?> 
+  <?php echo $this->Html->script('script'); ?>
 
 </head>
 <body>
@@ -22,7 +23,11 @@
     <?php echo $this->Session->flash(); ?>
     <!-- Aquí es donde quiero que se vean mis vistas -->
     <?php echo $content_for_layout ?>
+    <?php #Debugger::dump($user);?>
+    <?php #Debugger::dump( $this->Auth->user() );?>
+    <?php echo $this->element('change_password_modal');?>
   </div>
+
   <!-- Añadir un pie de página a cada página mostrada -->
   <?php echo $this->element('sql_dump')?>
   <?php echo $this->element('footer'); ?>

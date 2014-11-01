@@ -12,6 +12,17 @@
 	    $this->Auth->allowedActions = array('*');
 		}
 		function home(){	
+			if ( $this->Auth->user() ){
+				$this->set('user', current($this->Auth->user()) );
+				$this->loadModel( 'Profesor' );
+				if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
+					$this->loadModel( 'Estudiante' );
+					$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
+					$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+					$this->set('pendientes', $pendientes);
+				}
+				$this->Session->write('current_user',$this->Auth->user() );
+			}
 			$this->set('title_for_layout', 'Proyectos Ingeniería Civil Informática | Home');		
 		}
 

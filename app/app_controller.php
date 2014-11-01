@@ -10,9 +10,7 @@
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
         $this->Auth->logoutRedirect = array('controller' => 'pages', 'action' => 'home');
         $this->Auth->loginRedirect = array('controller' => 'pages', 'action' => 'home');
-        //Get all the details on the facebook user
         
-        //$this->set('user', $this->Auth->user());
     }
 	}
 ?>

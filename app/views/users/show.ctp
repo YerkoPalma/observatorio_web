@@ -1,3 +1,3 @@
 <div class="page-header">	
-  <h1><?php echo $user['nombre'];?> <br><small><?php echo $user['mail'];?></small></h1>
+  <h1><?php echo $show_user['nombre'];?> <br><small><?php echo $show_user['mail'];?></small></h1>
 </div>	

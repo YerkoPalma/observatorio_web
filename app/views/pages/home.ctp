@@ -1,5 +1,5 @@
-<?php 	if( $this->Session->read('current_user') ): ?>
-	<?php $user = null;?>
+<?php 	if( isset($user) ): ?>
+	<?php #$user = null;?>
 	<?php $user = current($this->Session->read('current_user'));?>
 	<div class="row">
 		<div class="col-md-3 side-bar">

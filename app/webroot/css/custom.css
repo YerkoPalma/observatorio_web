@@ -160,7 +160,7 @@ li.dropdown .divider{
 .page-header{
   margin: 0;
   padding: 2%;
-  background-color: #fef;
+  background-color: #FCF8EF;
   border-color: #ddd;
   border-width: 1px;
   border-style: solid;
@@ -168,5 +168,9 @@ li.dropdown .divider{
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-bottom-width: 4px;
-  border-bottom-color: #f0ad4e;
+  border-bottom-color: #976318;
+}
+
+.form:not(.active){
+  display: none;
 }

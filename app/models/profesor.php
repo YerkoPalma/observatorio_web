@@ -1,8 +1,14 @@
 <?php
-class User extends AppModel{
-	var $name = 'User';	
-  #var $primaryKey = 'users_id';
-  var $hasOne = array('Estudiante', 'Profesor');
+
+class Profesor extends AppModel{
+	var $name = 'Profesor';	  
+  #var $primaryKey = 'profesores_id';
+  var $belongsTo = array(
+    'User' => array(
+      'className'   => 'User',
+      'foreignKey'  => 'user_id'
+      )
+    );
 	var $validate = array(
     'nombre' => array(
       'alphaNumeric' => array(
