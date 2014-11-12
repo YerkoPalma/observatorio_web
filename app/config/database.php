@@ -68,15 +68,15 @@ class DATABASE_CONFIG {
 	public $default;
   function __construct() {
     $this->default = array(
-      'driver' => 'postgres',//'driver' => 'postgres',
-			'persistent' => false,//'persistent' => false,
-			'host' => 'localhost',//'host'       => getenv('DB_HOST'),
-			'port' => '5432',//
-			'login' => 'postgres',//'login'      => getenv('DB_USER'),
-			'password' => 'dezodio',//'password'   => getenv('DB_PASS'),
-			'database' => 'observatorio_db',//'database'   => getenv('DB_NAME'),
-			'prefix' => '',//'prefix'     => '',
-			//'encoding' => 'utf8',//'encoding'   => 'utf8',
+      'driver' => 'postgres',
+			'persistent' => false,
+			'host'       => getenv('DB_HOST'),
+			
+			'login'      => getenv('DB_USER'),
+			'password'   => getenv('DB_PASS'),
+			'database'   => getenv('DB_NAME'),
+			'prefix'     => '',
+			'encoding' => 'utf8',//'encoding'   => 'utf8',
     );
   }
 
