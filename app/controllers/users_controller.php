@@ -14,6 +14,7 @@
     }   
     
 		function login(){      
+      $this->set('title_for_layout', 'Proyectos Ingeniería Civil Informática | Login');
       if($this->Auth->user()){
         $this->Session->write('current_user', $this->Auth->user());
         $this->set('user',current( $this->Auth->user() ));  
@@ -29,6 +30,7 @@
 		}	
 
 		function add(){
+      $this->set('title_for_layout', 'Proyectos Ingeniería Civil Informática | Registro');
 			//Si se trata de un post y no de acceder a travez de la URL
 			if ( $this->data ) {
 

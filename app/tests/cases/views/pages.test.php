@@ -41,7 +41,7 @@ class PagesViewsTest extends CakeWebTestCase {
     //volvemos a la pagina de inicio
     $this->back();
     $this->clickLink("Registrate");
-    $this->assertTitle(new PatternExpectation('/Registrate/'));    
+    $this->assertTitle(new PatternExpectation('/Registro/'));    
 
   }
 

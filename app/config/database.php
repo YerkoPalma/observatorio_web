@@ -68,7 +68,7 @@ class DATABASE_CONFIG {
 	public $default;
   function __construct() {
     $this->default = array(
-      'driver' => 'postgres',//'datasource' => 'Database/Postgres',
+      'driver' => 'postgres',//'driver' => 'postgres',
 			'persistent' => false,//'persistent' => false,
 			'host' => 'localhost',//'host'       => getenv('DB_HOST'),
 			'port' => '5432',//

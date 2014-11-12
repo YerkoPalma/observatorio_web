@@ -27,14 +27,20 @@
 		}
 
 		function help(){		
+			if ( $this->Auth->user() )
+				$this->set('user', current($this->Auth->user()) );
 			$this->set('title_for_layout', 'Proyectos Ingeniería Civil Informática | Help');	
 		}
 
 		function about(){			
+			if ( $this->Auth->user() )
+				$this->set('user', current($this->Auth->user()) );
 			$this->set('title_for_layout', 'Proyectos Ingeniería Civil Informática | About');
 		}
 
 		function contact(){			
+			if ( $this->Auth->user() )
+				$this->set('user', current($this->Auth->user()) );
 			$this->set('title_for_layout', 'Proyectos Ingeniería Civil Informática | Contact');
 		}		
 

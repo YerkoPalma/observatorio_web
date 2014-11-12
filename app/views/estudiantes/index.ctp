@@ -1,6 +1,6 @@
 <ul class="media-list">
 	<?php foreach ($estudiantes as $estudiante): ?>
-		<?php $avatar = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user['mail'] ) ) ) . "&s=40";?>
+		<?php $avatar = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $estudiante['Estudiante']['mail'] ) ) ) . "&s=40";?>
 		<li class="media">
 			<a class="pull-left" href="#">
 				<img class="media-object" src="<?php echo $avatar; ?>">
