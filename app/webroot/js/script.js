@@ -70,4 +70,33 @@ $(document).ready(function(){
 		
 	});
 
+	$("#newTag").click(function(e){
+		e.preventDefault();
+		var tag = $("#PropuestaTags").val();
+		if (tag != ""){
+			$(".tags").append("<span class='label label-primary'>"+tag+"<a class='rm-tag'>&times;</a></span>");
+			$("#PropuestaTags").val("");
+
+			var tagsValue = $("#PropuestaPalabrasClave").val();
+			if (tagsValue != ""){
+				$("#PropuestaPalabrasClave").val(tagsValue + "," + tag);
+			}
+			else{
+				$("#PropuestaPalabrasClave").val(tag);
+			}
+
+			$(".rm-tag").click(function(e){
+				e.preventDefault();
+				var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
+				$(this).parent().remove();				
+				var tags = $("#PropuestaPalabrasClave").val().split(",");
+				tags = jQuery.grep(tags, function(value){
+					return value != tagToRemove;
+				});
+				tags = tags.join(",");
+				$("#PropuestaPalabrasClave").val(tags);
+			});
+		}
+	});
+
 });

@@ -174,3 +174,119 @@ li.dropdown .divider{
 .form:not(.active){
   display: none;
 }
+
+.btn-panel{
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
+  border-right: solid 1px #999;
+}
+
+.btn-panel .btn{
+  margin: 10% 6%;
+}
+
+.tags span{
+  margin-right: 2%; 
+}
+
+.tags span .rm-tag{
+  margin: 1%;
+  cursor: pointer;
+  color: #bbb;
+  font-size: 1.2em;
+  
+  position: relative;
+  top: 1px;
+}
+
+.tags span .rm-tag:hover{
+  text-decoration: none;
+  color: #eee;
+  background-color: #d9534f;
+  border-radius: 200px;
+}
+
+.nav-tabs{
+  border-color: transparent;
+}
+
+.nav-tabs li.active > a, .nav-tabs li.active > a:hover{
+  color: #fff;
+  border-radius: 4px;
+  cursor: default;
+  background-color: #337ab7;
+  border: transparent;
+}
+
+.nav-tabs li a:hover{
+  border-color: transparent;
+  background-color: #ddd;
+  border-radius: 4px;
+  color: #2a6496;
+}
+
+.tab-pane{
+  padding: 2%;
+}
+
+.nav-tabs li.link a:hover{
+  border-color: transparent;
+  background-color: #5cb85c;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.feed{
+  padding: 1% 2%;
+  border-bottom: solid 1px #bbb;
+}
+
+.feed:not(:first-child){
+  margin-top: 2%;
+}
+
+
+.media-body, .media-left{
+  display: table-cell;
+  vertical-align: top;
+}
+
+.feed .media-body p{
+  vertical-align: bottom;
+  margin: 0;
+  margin-top: 5%;
+  color: #888;
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 2% 10%;
+  font-size: 17.5px;
+  border-left: 5px solid #ddd;
+}
+
+.feed-header img{
+  width: 80%;
+}
+
+.project-panel h1{
+  margin: 0;
+}
+
+.feeds.social .media-heading a{
+  display: none;
+}
+
+.feeds.normal .media-heading a{
+  display: inline;
+}
+
+.form-inline .form-group{
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.panel #PropuestaTipoIdeaId {
+  width: 45.5%;
+}

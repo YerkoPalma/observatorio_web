@@ -1,5 +1,5 @@
 <?php 	if( isset($user) ): ?>
-	<?php #$user = null;?>
+	
 	<?php $user = current($this->Session->read('current_user'));?>
 	<div class="row">
 		<div class="col-md-3 side-bar">
@@ -7,7 +7,9 @@
 		</div>
 
 		<div class="col-md-9">
-					
+			<?php echo $this->element('feed', array(
+													"feeds" => array($propuestas),
+													"type" => "social")); ?>
 		</div>
 	</div>
 <?php else:?>

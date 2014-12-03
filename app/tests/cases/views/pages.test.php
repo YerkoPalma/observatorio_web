@@ -70,8 +70,45 @@ class PagesViewsTest extends CakeWebTestCase {
     //volvemos a la pagina de inicio
     $this->back();
     $this->clickLink("Ingeniería");
-    $this->assertTitle(new PatternExpectation('/Ingeniería U de Santiago/'));
+    $this->assertTitle(new PatternExpectation('/Ingeniería U de Santiago/'));    
+  }
+
+  function testContactPage(){
+    //obtenemos la pagina
+    $this->get("https://observatorio-web.herokuapp.com/pages/contact");
     
+    //Probamos que la respuesta sea la correcta
+    $this->assertResponse(200);
+
+    //Luego, probamos el contenido, partiendo por el titulo
+    $this->assertTitle("Proyectos Ingeniería Civil Informática | Contact");
+
+    //Ahora se prueban los inputs del form
+    $this->assertField("data[sender]");
+
+    //Ahora se prueban los inputs del form
+    $this->assertField("data[subject]");
+
+    //Ahora se prueban los inputs del form
+    $this->assertField("data[message]");
+
+    //Probamos enviar el formulario sin datos y que falle
+    //$this->clickSubmit('Enviar');
+    //Probamos que la respuesta sea la correcta
+    //$this->assertResponse(404);
+
+    //Ahora probamos llenando el formulario
+    //$this->back();
+    //$this->setField("data[sender]", "New Sender");
+
+    //$this->setField("data[subject]", "New Subject");
+
+    //$this->setField("data[message]", "This is a test message");
+
+    //Lo enviamos, y esperamos que la respuesta sea correcta
+    //$this->clickSubmit('Enviar');
+    //Probamos que la respuesta sea la correcta
+    //$this->assertResponse(200);
   }
 }
 ?>

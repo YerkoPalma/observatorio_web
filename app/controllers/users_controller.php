@@ -2,6 +2,7 @@
 
 	Class UsersController extends AppController {
 		var $name = 'Users';		
+    var $helpers = array('Html', 'Feed');
 		var $components = array('Auth', 'Session', 'RequestHandler');    
 
 		function beforeFilter() {
@@ -184,6 +185,8 @@
     function show(){      
       $user = $this->User->findById($this->params['pass'][0]); 
       $this->set('show_user',current($user));
+      $this->loadModel( 'Propuesta' );
+      $this->set('propuestas', $this->Propuesta->find('all') );
   
       if ( $this->Auth->user() ) {      
         $this->set('user',current($this->Auth->user()));  

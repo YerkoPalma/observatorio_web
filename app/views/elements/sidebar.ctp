@@ -24,13 +24,13 @@
 						echo $html->link('Estudiantes'.$pend_badge, array('controller' => 'estudiantes', 'action' => 'index'), array('class' => 'btn btn-default btn-block', 'escape' => false));
 					}
 				?>
-				<?php echo $html->link('Ideas', array('controller' => 'ideas', 'action' => 'index'), array('class' => 'btn btn-default btn-block'))?>
+				<?php echo $html->link('Ideas', array('controller' => 'propuestas', 'action' => 'index'), array('class' => 'btn btn-default btn-block'))?>
 				<?php if( trim( $user['estado'] ) == "pendiente" ): ?>
 					<?php echo $html->link('Proyecto', array('controller' => 'users', 'action' => 'project'), array('class' => 'btn btn-default btn-block', 'disabled' => 'disabled'))?>
-					<?php echo $html->link('Curso', array('controller' => 'ideas', 'action' => 'index'), array('class' => 'btn btn-default btn-block', 'disabled' => 'disabled'))?>
+					<?php echo $html->link('Curso', array('controller' => 'propuestas', 'action' => 'index'), array('class' => 'btn btn-default btn-block', 'disabled' => 'disabled'))?>
 				<?php else: ?>
 			  	<?php echo $html->link('Proyecto', array('controller' => 'users', 'action' => 'project'), array('class' => 'btn btn-default btn-block'))?>
-			  	<?php echo $html->link('Curso', array('controller' => 'ideas', 'action' => 'index'), array('class' => 'btn btn-default btn-block'))?>
+			  	<?php echo $html->link('Curso', array('controller' => 'propuestas', 'action' => 'index'), array('class' => 'btn btn-default btn-block'))?>
 			  <?php endif; ?>
 			  
 			</div>
