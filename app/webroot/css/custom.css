@@ -290,3 +290,117 @@ blockquote {
 .panel #PropuestaTipoIdeaId {
   width: 45.5%;
 }
+
+/*
+ *  Intento con bootstrap
+ */
+
+#canvas{
+  padding: 0;
+}
+
+#canvas .row{
+  margin: 0;
+}
+
+#canvas .col-md-2, #canvas .col-sm-2, 
+#canvas .col-md-3, #canvas .col-sm-3,
+#canvas .col-md-6, #canvas .col-sm-6{
+  padding: 0;
+} 
+
+#canvas .canvas-single.lg textarea{
+  height: 200px;
+}
+.canvas{
+  width: 110%;
+}
+.canvas .canvas-single, .canvas .double-canvas{
+  margin-left: -4px;
+  max-width: 20%;
+  display: inline-block;
+}
+
+.double-canvas .canvas-single{
+  max-width: 100%;
+}
+
+.double-canvas + .canvas-single{
+  margin-left: -9px;
+}
+.canvas-single .form-group{
+  margin-bottom: 0;
+}
+
+.canvas-single.bottom-right, .canvas-single.bottom-left{
+  max-width: 49.45%;
+} 
+
+.canvas-single.bottom-right .form-group .tags{
+  border-bottom-right-radius: 4px;
+}
+
+.canvas-single.bottom-left .form-group .tags{
+  border-bottom-left-radius: 4px;
+}
+
+.canvas .canvas-single .form-control, .canvas .canvas-single a.btn,
+#canvas .canvas-single .form-control, #canvas .canvas-single a.btn
+{
+  border-radius: 0;
+  margin-left: 0;
+}
+
+.canvas-single textarea{
+  border-top: 0px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+}
+
+.canvas-single textarea:focus, .canvas-single input:focus{
+  border-color: #ccc;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.canvas-single label{
+  padding-left: 5px;
+  padding-top: 5px;
+  width: 100%;
+  margin-bottom: 0;
+  background-color: #fff;
+  border-top: solid 1px #ccc;
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #ccc; 
+}
+
+.canvas-single.top-left label{
+  border-top-left-radius: 4px;
+}
+
+.canvas-single.top-right label{
+  border-top-right-radius: 4px;
+}
+
+.canvas-single.large textarea{
+  height: 200px;
+  position: relative;
+  top: -147px;
+  z-index: -1;
+}
+
+.canvas-single.large label{
+  position: relative;
+  top: -147px;
+  z-index: -2;
+}
+
+.canvas-single.large .form-group:first-child{
+  height: 79px;
+}
+
+.jumbotron{
+  background-color: #ddd;
+}

@@ -3756,3 +3756,563 @@ LINE 1:  INTERSECT SELECT * FROM propuestas p INNER JOIN users u ON ...
 2014-12-02 21:57:15 Warning: Warning (2): preg_match() [http://php.net/function.preg-match]: Delimiter must not be alphanumeric or backslash in [/var/www/observatorio/cake/libs/model/model.php, line 2631]
 2014-12-02 21:57:15 Warning: Warning (2): preg_match() [http://php.net/function.preg-match]: Empty regular expression in [/var/www/observatorio/cake/libs/model/model.php, line 2631]
 2014-12-02 21:57:15 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-02 23:09:20 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-02 23:09:20 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-02 23:09:20 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 187]
+2014-12-02 23:09:30 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-02 23:09:30 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-02 23:09:30 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 187]
+2014-12-02 23:09:31 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-02 23:09:31 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-02 23:09:31 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 207]
+2014-12-02 23:50:13 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-02 23:50:13 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-02 23:50:13 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 187]
+2014-12-02 23:50:16 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed:  in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-02 23:50:16 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/elements/feed.ctp, line 3]
+2014-12-02 23:52:25 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-02 23:52:25 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-02 23:52:25 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 187]
+2014-12-03 00:27:31 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-03 00:27:31 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-03 00:27:31 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 187]
+2014-12-03 00:27:36 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-03 00:27:36 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-03 00:27:36 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 207]
+2014-12-04 16:47:06 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 16:47:06 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 16:47:06 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:22:36 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:22:36 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:22:36 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:22:42 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:22:42 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:22:42 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:23:24 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:23:24 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:23:24 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:23:27 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:23:27 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:23:27 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:24:10 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:24:10 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:24:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:24:11 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:24:11 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:24:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:24:26 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:24:26 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:24:26 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:25:07 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:25:07 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:25:07 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:25:08 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:25:08 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:25:08 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:26:30 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:26:30 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:26:30 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:26:31 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:26:31 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:26:31 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:26:31 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:26:31 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:26:31 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:27:08 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:27:08 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:27:08 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:27:10 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:27:10 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:27:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:29:01 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:29:01 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:29:01 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:29:03 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:29:03 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:29:03 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:29:04 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:29:04 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:29:04 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:29:08 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:29:08 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:29:08 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:29:10 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:29:10 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:29:10 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:30:22 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:30:22 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:30:22 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:30:23 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:30:23 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:30:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:33:28 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:33:28 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:33:28 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:33:29 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:33:29 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:33:29 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:33:58 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:33:58 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:33:58 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:33:59 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:33:59 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:33:59 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:39:48 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:39:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:42:38 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:42:38 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:42:38 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:42:38 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:42:38 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:42:38 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:42:38 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:42:38 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:42:38 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:42:38 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:43:02 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:43:02 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:43:02 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:43:03 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:43:03 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:43:03 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:43:18 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:43:18 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:43:18 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:43:19 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:43:19 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:43:19 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:43:52 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:43:52 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:43:52 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:43:53 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 17:43:53 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...d" = "TipoIdea"."id")  WHERE "Propuesta"."id" IN ('img', 'lo...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 17:43:53 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:44:07 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:44:50 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:44:50 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:44:51 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:44:51 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:45:15 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:45:15 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:45:30 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:46:30 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:46:30 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:46:32 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:46:32 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:47:43 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:47:44 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:47:59 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:48:00 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:48:00 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:48:00 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:48:22 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:48:22 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:48:44 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:48:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:48:45 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:48:45 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 17:49:47 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:49:48 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:50:09 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:50:09 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:50:29 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:50:30 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:51:38 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:51:39 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:52:42 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:52:43 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:53:05 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 17:53:06 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:04:48 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:07:29 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:11:12 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:11:12 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 18:12:01 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:12:03 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:12:18 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:12:20 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:12:58 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:13:13 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:14:07 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:14:07 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 18:16:23 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:16:25 Warning: Warning (2): Missing argument 1 for PropuestasController::addcanvas() in [/var/www/observatorio/app/controllers/propuestas_controller.php, line 102]
+2014-12-04 18:16:59 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 18:17:53 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 18:18:02 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 18:18:03 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 18:18:06 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 18:18:07 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 18:26:43 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  insert or update on table "concepto_comparacions" violates foreign key constraint "fk_concepto_relations_comparac"
+DETAIL:  Key (comparacion_proyecto_id)=(0) is not present in table "comparacions_proyectos". in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 18:26:43 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  insert or update on table "concepto_comparacions" violates foreign key constraint "fk_concepto_relations_comparac"
+DETAIL:  Key (comparacion_proyecto_id)=(0) is not present in table "comparacions_proyectos".</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 18:26:43 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 18:28:40 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  insert or update on table "concepto_comparacions" violates foreign key constraint "fk_concepto_relations_comparac"
+DETAIL:  Key (comparacion_proyecto_id)=(0) is not present in table "comparacions_proyectos". in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 18:28:40 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  insert or update on table "concepto_comparacions" violates foreign key constraint "fk_concepto_relations_comparac"
+DETAIL:  Key (comparacion_proyecto_id)=(0) is not present in table "comparacions_proyectos".</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 18:28:40 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/observatorio/cake/libs/debugger.php:686) in [/var/www/observatorio/cake/libs/controller/controller.php, line 742]
+2014-12-04 22:43:21 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 22:43:21 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 22:43:53 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 22:43:53 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 22:44:30 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 22:44:30 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 22:44:59 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 22:44:59 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 22:45:27 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 22:45:27 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:07:46 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:07:46 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:09:47 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:09:47 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:13:33 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:13:33 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:14:30 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:14:30 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:19:15 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:19:15 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:19:46 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:19:46 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:20:07 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:20:07 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:22:11 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:22:11 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:22:11 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:23:57 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:23:57 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:23:57 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:24:40 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:24:40 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:24:40 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:26:34 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:26:34 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:26:34 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:27:01 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:27:01 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:27:01 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:30:37 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:30:37 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:30:37 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:33:31 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:33:31 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:33:31 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:33:48 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:33:48 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:33:48 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:34:31 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:34:31 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:34:31 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:37:50 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:37:50 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:37:50 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:40:04 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:40:04 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:40:04 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:40:12 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:40:12 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:40:12 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 187]
+2014-12-04 23:40:15 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:40:15 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:40:15 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:40:24 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:40:24 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ..._id" = "TipoIdea"."id")  WHERE "Propuesta"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:40:24 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/observatorio/app/views/propuestas/show.ctp, line 12]
+2014-12-04 23:40:28 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:40:28 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:40:28 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 187]
+2014-12-04 23:40:31 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:40:31 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:40:31 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 187]
+2014-12-04 23:40:33 Warning: Warning (2): pg_query() [http://php.net/function.pg-query]: Query failed: ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^ in [/var/www/observatorio/cake/libs/model/datasources/dbo/dbo_postgres.php, line 167]
+2014-12-04 23:40:33 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> ERROR:  invalid input syntax for integer: "img"
+LINE 1: ...or"."user_id" = "User"."id")  WHERE "User"."id" = 'img'    L...
+                                                             ^</span> in [/var/www/observatorio/cake/libs/model/datasources/dbo_source.php, line 684]
+2014-12-04 23:40:33 Warning: Warning (2): current() expects parameter 1 to be array, boolean given in [/var/www/observatorio/app/controllers/users_controller.php, line 207]

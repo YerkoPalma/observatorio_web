@@ -13,6 +13,11 @@ class Propuesta extends AppModel{
       )
     #'EstadoPropuesta'
     );
+  var $hasMany = array(
+    'ConceptoComparacion' => array(
+      'className' => 'ConceptoComparacion',
+      'foreignKey' => 'propuesta_id')
+    );
 	var $validate = array(
     'nombre_propuesta' => array(  
       'rule' => 'notEmpty',

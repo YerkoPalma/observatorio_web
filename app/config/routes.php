@@ -36,6 +36,7 @@
 	Router::connect('/pages/contact', array('controller' => 'pages', 'action' => 'contact'));
 
 	Router::connect('/users/add', array('controller' => 'users', 'action' => 'add'));
+	Router::connect('/propuestas/addcanvas/:propuestaid', array('controller' => 'propuestas', 'action' => 'addcanvas'), array('propuestaid' => '[0-9]+'));
 	
 	//Router::connect('/pages/help', array('controller' => 'pages', 'action' => 'help'));
 	//Router::connect('/pages/about', array('controller' => 'pages', 'action' => 'about'));

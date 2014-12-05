@@ -39,8 +39,12 @@ class PropuestasController extends AppController {
 				$query .= "SELECT * FROM propuestas p INNER JOIN users u ON p.user_id=u.id AND p.palabras_clave LIKE '%$tag%'";
 			}
 
-			$query .= ";";
-			$this->set('propuestas', $this->Propuesta->query( $query ));
+			if ( $query != "" ){
+				$query .= ";";
+				$this->set('propuestas', $this->Propuesta->query( $query ));
+			}else{
+				$this->set('propuestas', $this->Propuesta->find( 'all' ));
+			}
 		}
 	}
 
@@ -75,14 +79,14 @@ class PropuestasController extends AppController {
 			if ( $this->data ){
 				//sacar el user id del user con sesion iniciada
 				$this->data['Propuesta']['user_id'] = $this->Auth->user('id');
-				//definir el estado de idea como 10 (registrada) 
-				$this->data['Propuesta']['estado_propuesta_id'] = "10";
+				//definir el estado de idea como 10 (incompleto) 
+				$this->data['Propuesta']['estado_propuesta_id'] = "12";
 
 				$this->Propuesta->create();
 				//Debugger::dump($this->data['Propuesta']);
 				if ( $this->Propuesta->save( $this->data )){
 					$this->Session->setFlash('Correctamente guardado!', 'flash_success');
-					$this->redirect(array( 'action' => 'index' ));
+					$this->redirect(array( 'action' => 'addcanvas', $this->Propuesta->getLastInsertID() ));
 				}else{
 					$this->Session->setFlash('Hubo un error! Verifica nuevamente tus datos', 'flash_warning');
 					$this->redirect(array( 'action' => 'add' ));
@@ -93,6 +97,50 @@ class PropuestasController extends AppController {
 			$this->Session->setFlash('Debes iniciar sesión para poder acceder a las propuestas', 'flash_success');
 			$this->redirect(array( 'controller' => 'pages', 'action' => 'home' ));
 		}
+	}
+
+	function addcanvas(){
+		if ( $this->Auth->user() ){
+			$this->set('user', current( $this->Auth->user()) );
+			$this->layout = 'connected';
+			if (isset($this->params['propuestaid'])){
+				$propuestaid = $this->params['propuestaid'];
+			}else{
+				$propuestaid = $this->data['Propuesta'][0]['propuesta_id'];
+			}
+			$propuesta = $this->Propuesta->findById($propuestaid); 
+			$this->set("propuesta", $propuesta);
+			$this->Propuesta->id = $propuestaid;
+			//Solo procedemos si la propuesta esta incompleta, sino redirigimos a la propuesta 
+			if( $propuesta['Propuesta']['estado_propuesta_id'] == "12" ){
+
+				//si se trata de enviar el formulario
+				if ($this->data){
+					//guardo cada uno de los conceptos de comparacion
+					foreach ($this->data['Propuesta'] as $conceptoComparacion){
+						$data = array();
+						$data['ConceptoComparacion'] = $conceptoComparacion;
+						$data['ConceptoComparacion']['propuesta_id'] = $propuestaid;
+						$data['ConceptoComparacion']['comparacion_proyecto_id'] = "0";
+
+						$this->Propuesta->ConceptoComparacion->saveAll($data);
+					}
+					//actualizo el estado de la propuesta
+					$this->Propuesta->saveField('estado_propuesta_id', '10');
+					$this->redirect(array('action' => 'index'));
+				}
+			}else{
+				$this->Session->setFlash("asad".$this->params['propuestaid'], 'flash_warning');
+				$this->redirect(array('action' => 'show', $propuestaid));
+			}
+		}
+	}
+
+	function show(){
+		$propuesta = $this->Propuesta->findById($this->params['pass'][0]); 
+		$this->set("propuesta", $propuesta);
+		$this->set("user", current($this->Auth->user()) );
+		$this->layout = 'connected';
 	}
 }
 ?>

@@ -1,3 +1,4 @@
+<?php echo $html->script('prototype'); ?>
 <?php 
 //si existen propuestas
 if ( isset($propuestas) ){

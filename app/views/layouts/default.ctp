@@ -11,10 +11,10 @@
   <?php echo $this->Html->css('custom'); ?>  
   
   <?php echo $this->Html->script('jquery.min'); ?>
-  <?php echo $this->Html->script('bootstrap.min'); ?> 
-  <?php echo $html->script('prototype'); ?>
-  <?php echo $html->script('scriptaculous'); ?>
+  <?php echo $this->Html->script('bootstrap.min'); ?>   
   <?php echo $this->Html->script('script'); ?>
+  <?php #echo $html->script('prototype'); ?>
+  <?php #echo $html->script('scriptaculous'); ?>
 
 </head>
 <body>

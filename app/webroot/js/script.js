@@ -1,4 +1,37 @@
-$(document).ready(function(){
+$(document).ready(function(){	
+
+	$("#UserUsertypeEstudiante").parent().click(function(){
+		
+		$(".form.active").fadeOut("fast", function(){
+			$(".form.estudiante").fadeIn("slow", function(){
+				$(this).addClass("active");
+			});
+			$(this).removeClass("active");
+		});		
+		
+	});
+
+	$("#UserUsertypeProfesor").parent().click(function(){
+		
+		$(".form.active").fadeOut("fast", function(){
+			$(".form.profesor").fadeIn("slow", function(){
+				$(this).addClass("active");
+			});
+			$(this).removeClass("active");
+		});		
+		
+	});
+
+	$("#UserUsertypeExterno").parent().click(function(){
+		
+		$(".form.active").fadeOut("fast", function(){
+			$(".form.externo").fadeIn("slow", function(){
+				$(this).addClass("active");
+			});
+			$(this).removeClass("active");
+		});		
+		
+	});
 
 	$("#UserAddForm").submit(function(e){
 
@@ -37,66 +70,79 @@ $(document).ready(function(){
 		
 	});
 
-	$("#UserUsertypeEstudiante").parent().click(function(){
-		
-		$(".form.active").fadeOut("fast", function(){
-			$(".form.estudiante").fadeIn("slow", function(){
-				$(this).addClass("active");
-			});
-			$(this).removeClass("active");
-		});		
-		
-	});
-
-	$("#UserUsertypeProfesor").parent().click(function(){
-		
-		$(".form.active").fadeOut("fast", function(){
-			$(".form.profesor").fadeIn("slow", function(){
-				$(this).addClass("active");
-			});
-			$(this).removeClass("active");
-		});		
-		
-	});
-
-	$("#UserUsertypeExterno").parent().click(function(){
-		
-		$(".form.active").fadeOut("fast", function(){
-			$(".form.externo").fadeIn("slow", function(){
-				$(this).addClass("active");
-			});
-			$(this).removeClass("active");
-		});		
-		
-	});
-
-	$("#newTag").click(function(e){
-		e.preventDefault();
-		var tag = $("#PropuestaTags").val();
+	function addTag(event, inputTarget, inputTag, divTarget){
+		event.preventDefault();
+		/*
+		 *	inputTag = "#PropuestaTags" -> donde se ingreso el nuevo tag
+		 *	divTarget = ".tags" -> donde se almacenan todos los tags
+		 *	inputTarget = "#PropuestaPalabrasClave" -> el input hidden que guarda los tags
+		 *
+		 */
+		var tag = $(inputTag).val();
 		if (tag != ""){
-			$(".tags").append("<span class='label label-primary'>"+tag+"<a class='rm-tag'>&times;</a></span>");
-			$("#PropuestaTags").val("");
+			$(divTarget).append("<span class='label label-primary'>"+tag+"<a class='rm-tag'>&times;</a></span>");
+			$(inputTag).val("");
 
-			var tagsValue = $("#PropuestaPalabrasClave").val();
+			var tagsValue = $(inputTarget).val();
 			if (tagsValue != ""){
-				$("#PropuestaPalabrasClave").val(tagsValue + "," + tag);
+				$(inputTarget).val(tagsValue + "," + tag);
 			}
 			else{
-				$("#PropuestaPalabrasClave").val(tag);
+				$(inputTarget).val(tag);
 			}
 
 			$(".rm-tag").click(function(e){
 				e.preventDefault();
 				var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
 				$(this).parent().remove();				
-				var tags = $("#PropuestaPalabrasClave").val().split(",");
+				var tags = $(inputTarget).val().split(",");
 				tags = jQuery.grep(tags, function(value){
 					return value != tagToRemove;
 				});
 				tags = tags.join(",");
-				$("#PropuestaPalabrasClave").val(tags);
+				$(inputTarget).val(tags);
 			});
 		}
+	}
+
+	$("#newTag").click( function(e) {
+		addTag(e, "#PropuestaTags", "#PropuestaPalabrasClave", ".tags");
+	});
+
+	$("#newTagPartners").click( function(e){
+		addTag(e, "#Propuesta0Tags", "#Propuesta0PalabrasClave", "#PartnersTags");
+	});
+
+	$("#newTagActivities").click( function(e){
+		addTag(e, "#Propuesta1Tags", "#Propuesta1PalabrasClave", "#ActivitiesTags");
+	});
+
+	$("#newTagPropositions").click( function(e){
+		addTag(e, "#Propuesta2Tags", "#Propuesta2PalabrasClave", "#PropositionsTags");
+	});
+
+	$("#newTagRelationships").click( function(e){
+		addTag(e, "#Propuesta3Tags", "#Propuesta3PalabrasClave", "#RelationshipsTags");
+	});
+
+	$("#newTagSegments").click( function(e){
+		addTag(e, "#Propuesta4Tags", "#Propuesta4PalabrasClave", "#SegmentsTags");
+	});
+
+	$("#newTagResources").click( function(e){
+		addTag(e, "#Propuesta5Tags", "#Propuesta5PalabrasClave", "#ResourcesTags");
+	});
+
+	$("#newTagChannels").click( function(e){
+		addTag(e, "#Propuesta6Tags", "#Propuesta6PalabrasClave", "#ChannelsTags");
+	});
+
+	$("#newTagCosts").click( function(e){
+		addTag(e, "#Propuesta7Tags", "#Propuesta7PalabrasClave", "#CostsTags");
+	});
+
+	$("#newTagRevenueStreams").click( function(e){
+		addTag(e, "#Propuesta8Tags", "#Propuesta8PalabrasClave", "#RevenueStreamsTags");
 	});
 
 });
