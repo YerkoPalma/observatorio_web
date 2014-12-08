@@ -93,22 +93,25 @@ class PagesViewsTest extends CakeWebTestCase {
     $this->assertField("data[message]");
 
     //Probamos enviar el formulario sin datos y que falle
-    //$this->clickSubmit('Enviar');
+    $this->clickSubmit('Enviar');
     //Probamos que la respuesta sea la correcta
-    //$this->assertResponse(404);
+    $this->assertResponse(200);
+    $this->assertText('Debe completar los campos correctamente');
 
     //Ahora probamos llenando el formulario
-    //$this->back();
-    //$this->setField("data[sender]", "New Sender");
+    //obtenemos la pagina
+    $this->get("https://observatorio-web.herokuapp.com/pages/contact");
+    $this->setField("data[sender]", "New Sender");
 
-    //$this->setField("data[subject]", "New Subject");
+    $this->setField("data[subject]", "New Subject");
 
-    //$this->setField("data[message]", "This is a test message");
+    $this->setField("data[message]", "This is a test message");
 
     //Lo enviamos, y esperamos que la respuesta sea correcta
-    //$this->clickSubmit('Enviar');
+    $this->clickSubmit('Enviar');
     //Probamos que la respuesta sea la correcta
-    //$this->assertResponse(200);
+    $this->assertResponse(200);
+    $this->assertText('Debe completar los campos correctamente');
   }
 }
 ?>

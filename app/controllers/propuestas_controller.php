@@ -53,6 +53,14 @@ class PropuestasController extends AppController {
 			$this->set('user', current($this->Auth->user()) );
 			$this->loadModel('TipoIdea');
 			$this->set('tiposIdeas', $this->TipoIdea->find('all') );
+			$this->loadModel( 'Profesor' );
+			
+			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
+				$this->loadModel( 'Estudiante' );
+				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
+				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+				$this->set('pendientes', $pendientes);
+			}
 			//si existen propuestas las declaramos
 			if ( $this->Propuesta->find('all') )
 				$this->set('propuestas', $this->Propuesta->find('all'));

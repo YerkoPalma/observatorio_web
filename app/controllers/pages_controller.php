@@ -48,17 +48,19 @@
 
 		function send(){
 			if (!empty($this->data)) {
+				if ( $this->data['sender'] != "" ){
+					$this->Email->from    = $this->data['sender'];
+					$this->Email->to      = 'Alguien más <yerko.palma@usach.cl>';
+					$this->Email->subject = $this->data['subject'];
+					$this->Email->send( $this->data['message'] );				
 
-				$this->Email->from    = $this->data['sender'];
-				$this->Email->to      = 'Alguien más <yerko.palma@usach.cl>';
-				$this->Email->subject = $this->data['subject'];
-				$this->Email->send( $this->data['message'] );				
-
-        $this->Session->setFlash('Su mensaje ha sido enviado correctamente', 'flash_success');
-        $this->redirect(array('action' => 'contact'));
-	    } else {
-	        // Save logic goes here
-	    }
+	        $this->Session->setFlash('Su mensaje ha sido enviado correctamente', 'flash_success');
+	        $this->redirect(array('action' => 'contact'));
+	      } else{
+	      	$this->Session->setFlash('Debe completar los campos correctamente', 'flash_warning');
+	        $this->redirect(array('action' => 'contact'));
+	      }
+	    } 
 		}
 	}
 ?>
