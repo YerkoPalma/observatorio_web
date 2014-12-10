@@ -1,4 +1,5 @@
 <?php
+#App::uses('Validation', 'Utility');
 
 	Class PagesController extends AppController {
 		var $name = 'Pages';
@@ -48,7 +49,7 @@
 
 		function send(){
 			if (!empty($this->data)) {
-				if ( $this->data['sender'] != "" ){
+				if ( Validation::email( $this->data['sender'] ) && Validation::notEmpty( $this->data['subject'] ) && Validation::minLength( $this->data['message'], 5 ) ){
 					$this->Email->from    = $this->data['sender'];
 					$this->Email->to      = 'Alguien más <yerko.palma@usach.cl>';
 					$this->Email->subject = $this->data['subject'];

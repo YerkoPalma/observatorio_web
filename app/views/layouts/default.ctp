@@ -6,13 +6,19 @@
   <link rel="shortcut icon" href="img/logo_usach.png" type="image/x-icon">
   <!-- Incluir ficheros y scripts externos aquí (Mirar el ayudante HTML para más información -->
   <?php echo $this->Html->css('bootstrap.min'); ?>
-  <?php echo $this->Html->css('docs.min'); ?>
+  <?php echo $this->Html->css('docs.min'); ?>   
   
   <?php echo $this->Html->css('custom'); ?>  
+   
   
   <?php echo $this->Html->script('jquery.min'); ?>
   <?php echo $this->Html->script('bootstrap.min'); ?>   
   <?php echo $this->Html->script('script'); ?>
+  <?php if ($title_for_layout == "Proyectos Ingeniería Civil Informática | Help") {
+      echo $this->Html->css('reset');
+      echo $this->Html->css('style');
+      echo $html->script('modernizr');
+    }?>
   <?php #echo $html->script('prototype'); ?>
   <?php #echo $html->script('scriptaculous'); ?>
 

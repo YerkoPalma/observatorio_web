@@ -111,7 +111,7 @@ class PagesViewsTest extends CakeWebTestCase {
     $this->clickSubmit('Enviar');
     //Probamos que la respuesta sea la correcta
     $this->assertResponse(200);
-    $this->assertText('Debe completar los campos correctamente');
+    $this->assertText('Su mensaje ha sido enviado correctamente');
   }
 }
 ?>
