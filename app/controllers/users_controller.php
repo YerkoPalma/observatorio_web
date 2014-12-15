@@ -123,8 +123,70 @@
             break;
 
           case 'externo':
-            # code...
+            
+            #genera una contraseña aleatoria de 5 caracteres
+            $random_pass = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 5);
+
+            #se la asigno al usuario
+            $this->data['User']['password'] = $this->Auth->password( $random_pass );
+
+            #dejo el estado como activo
+            $this->data['User']['estado'] = 'activo';
+
+            #se crea el usuario
+            $this->User->create();
+
+            #lo guardamos
+            if ( $this->User->save( $this->data ) ){
+
+              #si se pudo guardar, revisamos el tipo de usuario
+              $tipo = ( isset($this->data['Externo']['type']) ) ? trim( $this->data['Externo']['type'] ) : 'Tutor';
+
+              #generamos los datos para guardar
+              $this->data[$tipo]['password'] = $this->data['User']['password'];
+              $this->data[$tipo]['nombre'] = $this->data['User']['nombre'];
+              $this->data[$tipo]['mail'] = $this->data['User']['mail'];
+              $this->data[$tipo]['estado'] = $this->data['User']['estado'];
+              #asocio el id de usuarios con el campo correspondiente en los estudiantes
+              $this->data[$tipo]['user_id'] = $this->User->getLastInsertId();
+
+              #revisamos en que modelo guardar
+              if ( $tipo == 'Tutor' ){
+                if ( $this->User->Tutor->save( $this->data ) ){
+                  #Inicio sesion con el usuario
+                  $this->Auth->login( $this->data );         
+                  $this->Session->setFlash('Bienvenido '. $this->Auth->user('nombre') . 'tu contraseña es '. $random_pass, 'flash_success');
+                  $this->Session->write('current_user', $this->Auth->user());
+                  $this->set('user', $this->Auth->user() );    
+                  $this->redirect( array('controller' => 'pages', 'action' => 'home') );
+                }
+              } elseif ($tipo == 'Inversionista') {
+                if ( $this->User->Inversionista->save( $this->data ) ){
+                  #Inicio sesion con el usuario
+                  $this->Auth->login( $this->data );         
+                  $this->Session->setFlash('Bienvenido '. $this->Auth->user('nombre'). 'tu contraseña es '. $random_pass , 'flash_success');
+                  $this->Session->write('current_user', $this->Auth->user());
+                  $this->set('user', $this->Auth->user() );    
+                  $this->redirect( array('controller' => 'pages', 'action' => 'home') );
+                }
+              }elseif ($tipo == 'Visita') {
+                if ( $this->User->Visita->save( $this->data ) ){
+                  #Inicio sesion con el usuario
+                  $this->Auth->login( $this->data );         
+                  $this->Session->setFlash('Bienvenido '. $this->Auth->user('nombre') . 'tu contraseña es '. $random_pass, 'flash_success');
+                  $this->Session->write('current_user', $this->Auth->user());
+                  $this->set('user', $this->Auth->user() );    
+                  $this->redirect( array('controller' => 'pages', 'action' => 'home') );
+                }
+              }
+
+            }else{
+              $this->Session->setFlash('No se pudo grabar el usuario, favor intentalo más tarde', 'flash_warning');
+              $this->redirect( array('action' => 'add') );
+            }
+              
             break;
+            
           
           default:
             #si se trata de un profesor, primero cargamos el modelo

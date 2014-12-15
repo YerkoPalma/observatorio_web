@@ -106,7 +106,7 @@ $(document).ready(function(){
 	}
 
 	$("#newTag").click( function(e) {
-		addTag(e, "#PropuestaTags", "#PropuestaPalabrasClave", ".tags");
+		addTag(e, "#PropuestaPalabrasClave","#PropuestaTags",  ".tags");
 	});
 
 	$("#newTagPartners").click( function(e){

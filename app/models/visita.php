@@ -1,8 +1,7 @@
 <?php
 
-class Profesor extends AppModel{
-	var $name = 'Profesor';	  
-  #var $primaryKey = 'profesores_id';
+class Visita extends AppModel{
+	var $name = 'Visita';	  
   var $belongsTo = array(
     'User' => array(
       'className'   => 'User',

@@ -10,9 +10,9 @@
 				    'separator' => '</label><label class="btn btn-default">',
 				    'legend' => false,
 				    'options' => array(
-					    'tutor'=>'Ofrecer tutorias',
-					    'inversor'=>'financiar proyectos',
-					    'visita'=>'proponer ideas'
+					    'Tutor'=>'Ofrecer tutorias',
+					    'Inversionista'=>'financiar proyectos',
+					    'Visita'=>'proponer ideas'
 				    ),
 				    'type' => 'radio'
 				));?>
@@ -20,16 +20,16 @@
 		</div>
 
 		<div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 col-sm-offset-1 control-label">Email</label>
+			<label for="inputEmail3" class="col-sm-2 col-sm-offset-1 control-label">Nombre</label>
 			<div class="col-sm-8">
-				<?php  echo $form->input('Profesor.mail', array('class' => 'form-control', 'placeholder' => 'juan.perez@mail.com')); ?>
+				<?php  echo $form->input('Externo.nombre', array('class' => 'form-control', 'placeholder' => 'Juan Perez')); ?>
 			</div>
 		</div>
 
 		<div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 col-sm-offset-1 control-label">RUT</label>
+			<label for="inputEmail3" class="col-sm-2 col-sm-offset-1 control-label">Mail</label>
 			<div class="col-sm-8">
-				<?php  echo $form->input('Profesor.rut', array('class' => 'form-control', 'placeholder' => '11.111.111-1')); ?>
+				<?php  echo $form->input('Externo.mail', array('class' => 'form-control', 'placeholder' => 'juan.perez@mail.com')); ?>
 			</div>
 		</div>
 		

@@ -10,12 +10,7 @@ class Estudiante extends AppModel{
       )
     );
 	var $validate = array(
-    'nombre' => array(
-      'alphaNumeric' => array(
-        'rule' => 'alphaNumeric',
-        'required' => true,
-        'message' => 'Sólo letras y números'
-        ),
+    'nombre' => array(      
       'isUnique' => array(
         'rule' => 'isUnique',
         'required' => true,

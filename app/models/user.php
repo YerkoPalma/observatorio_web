@@ -2,14 +2,9 @@
 class User extends AppModel{
 	var $name = 'User';	
   #var $primaryKey = 'users_id';
-  var $hasOne = array('Estudiante', 'Profesor');
+  var $hasOne = array('Estudiante', 'Profesor','Tutor','Inversionista','Visita');
 	var $validate = array(
-    'nombre' => array(
-      'alphaNumeric' => array(
-        'rule' => 'alphaNumeric',
-        'required' => true,
-        'message' => 'Sólo letras y números'
-        ),
+    'nombre' => array(      
       'isUnique' => array(
         'rule' => 'isUnique',
         'required' => true,
