@@ -95,7 +95,7 @@ class DATABASE_CONFIG {
 		'port' => '5432',//
 		'login' => 'postgres',//'login'      => getenv('DB_USER'),
 		'password' => 'dezodio',//'password'   => getenv('DB_PASS'),
-		'database' => 'observatorio_db',//'database'   => getenv('DB_NAME'),
+		'database' => 'observatorio_db_test',//'database'   => getenv('DB_NAME'),
 		'prefix' => '',//'prefix'     => '',
 		//'encoding' => 'utf8',//'encoding'   => 'utf8',
 	);
