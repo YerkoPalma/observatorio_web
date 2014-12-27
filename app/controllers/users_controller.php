@@ -259,7 +259,9 @@
           $this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
           
           $pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+          $ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
           $this->set('pendientes', $pendientes);
+          $this->set('nuevasIdeas', $ideasNuevas);
         }
       }       
     }
@@ -271,11 +273,14 @@
       if ( $this->Auth->user() ) {        
         $this->layout = 'connected';
         $this->loadModel( 'Profesor' );
+        $this->loadModel( 'Propuesta' );
         if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
           $this->loadModel( 'Estudiante' );
           $this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
           $pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+          $ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
           $this->set('pendientes', $pendientes);
+          $this->set('nuevasIdeas', $ideasNuevas);
         }
         $this->User->id = $this->params['pass'];
 

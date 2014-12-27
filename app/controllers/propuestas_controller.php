@@ -59,7 +59,9 @@ class PropuestasController extends AppController {
 				$this->loadModel( 'Estudiante' );
 				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
 				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
 				$this->set('pendientes', $pendientes);
+				$this->set('nuevasIdeas', $ideasNuevas);
 			}
 			//si existen propuestas las declaramos
 			if ( $this->Propuesta->find('all') )
@@ -82,6 +84,17 @@ class PropuestasController extends AppController {
 
 			$this->layout = 'connected';
 			$this->set('title_for_layout', 'Proyectos Ingeniería Civil Informática | Propuestas');
+
+			$this->loadModel( 'Profesor' );
+			
+			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
+				$this->loadModel( 'Estudiante' );
+				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
+				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
+				$this->set('pendientes', $pendientes);
+				$this->set('nuevasIdeas', $ideasNuevas);
+			}
 
 			//si se ha enviado la información
 			if ( $this->data ){
@@ -111,6 +124,16 @@ class PropuestasController extends AppController {
 		if ( $this->Auth->user() ){
 			$this->set('user', current( $this->Auth->user()) );
 			$this->layout = 'connected';
+			$this->loadModel( 'Profesor' );
+			
+			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
+				$this->loadModel( 'Estudiante' );
+				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
+				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
+				$this->set('pendientes', $pendientes);
+				$this->set('nuevasIdeas', $ideasNuevas);
+			}
 			if (isset($this->params['propuestaid'])){
 				$propuestaid = $this->params['propuestaid'];
 			}else{
@@ -149,6 +172,72 @@ class PropuestasController extends AppController {
 		$this->set("propuesta", $propuesta);
 		$this->set("user", current($this->Auth->user()) );
 		$this->layout = 'connected';
+		$this->loadModel( 'Profesor' );
+			
+			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
+				$this->loadModel( 'Estudiante' );
+				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
+				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
+				$this->set('pendientes', $pendientes);
+				$this->set('nuevasIdeas', $ideasNuevas);
+			}
 	}
+
+	function edit($id){
+		if ($this->Auth->user()){
+				$this->set('user', current($this->Auth->user()) );
+				$this->layout = 'connected';
+				$this->set('tiposIdeas', $this->Propuesta->TipoIdea->find('all'));
+
+				$this->loadModel( 'Profesor' );
+			
+			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
+				$this->loadModel( 'Estudiante' );
+				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
+				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
+				$this->set('pendientes', $pendientes);
+				$this->set('nuevasIdeas', $ideasNuevas);
+			}
+
+				$this->Propuesta->id = $id;
+				$propuesta = $this->Propuesta->read();
+				#solo puedo editar mis propias propuestas
+				if ($this->Auth->user('id') == $propuesta['User']['id']){	
+					#si solo se esta leyendo la página				
+					if (empty($this->data)) {
+	          $this->data = $this->Propuesta->read();
+	          $this->set('propuesta', $this->Propuesta->read());
+	          #si se POSTeo la información para editar
+	        }else{
+
+	        	#preparamos los datos de la propuesta
+	        	$this->data['Propuesta']['id'] = $id;
+	        	$this->data['Propuesta']['user_id'] = $this->Auth->user('id');
+	        	if($this->Propuesta->save($this->data)){
+
+	        		#ahora preparamos los datos de los conceptos de comparacion
+	        		foreach ($this->data['ConceptoComparacion'] as $concepto) {
+	        			$this->data['ConceptoComparacion'] = $concepto;
+	        			$this->data['ConceptoComparacion']['descripcion_concepto_comparacio'] = trim($concepto['descripcion_concepto_comparacio']);
+
+	        			$this->data['ConceptoComparacion']['propuesta_id'] = $id;
+								$this->data['ConceptoComparacion']['comparacion_proyecto_id'] = "0";
+
+								$this->Propuesta->ConceptoComparacion->saveAll( $this->data );
+	        		}
+		        	$this->redirect(array('action' => 'show', $id));
+		        }else{
+		        	$this->setFlash("ups","flash_warning");
+		        	$this->redirect(array('action' => 'index'));
+		        }
+	        }
+
+	      }else{
+	      	$this->set('propuestas', $this->Propuesta->findAllByUserId($this->Auth->user('id')));
+	      }
+			}
+		}
 }
 ?>

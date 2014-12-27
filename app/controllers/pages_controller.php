@@ -21,7 +21,9 @@
 					$this->loadModel( 'Estudiante' );
 					$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
 					$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
-					$this->set('pendientes', $pendientes);
+					$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
+          $this->set('pendientes', $pendientes);
+          $this->set('nuevasIdeas', $ideasNuevas);
 				}
 				$this->set('propuestas', $this->Propuesta->find('all') );
 				$this->Session->write('current_user',$this->Auth->user() );

@@ -13,6 +13,7 @@
 		function index(){		
 			$this->loadModel('User');
 			$this->loadModel( 'Profesor' );
+			$this->loadModel( 'Propuesta' );
 
 			if ( $this->Auth->user() ) {
 				$this->set('user', current($this->Auth->user()) );
@@ -22,7 +23,9 @@
 					
 					$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
 					$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+					$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
 					$this->set('pendientes', $pendientes);
+					$this->set('nuevasIdeas', $ideasNuevas);
 				}else{
 					$this->redirect(array('controller' => 'pages', 'action' => 'home'));
 				}
@@ -31,8 +34,27 @@
 				$this->Estudiante->order = 'Estudiante.estado DESC';
 				$this->set('estudiantes', $this->Estudiante->find('all'));
 				
+			}				
+		}
+
+		function curso(){
+			if ( $this->Auth->user() ){
+				$this->set('user', current($this->Auth->user()) );
+				$this->layout = 'connected';
+
+				$this->set( 'estudiantes', $this->Estudiante->User->find( 'all', array( "conditions" => array("Estudiante.estado" => "activo")) ) );		
+				$this->loadModel( 'Profesor' );
+				$this->loadModel( 'Propuesta' );
+        if ( is_array( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ) ){
+          
+          $this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
+          
+          $pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+          $ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
+					$this->set('pendientes', $pendientes);
+					$this->set('nuevasIdeas', $ideasNuevas);
+        }		
 			}
-				
 		}		
 			
 	}

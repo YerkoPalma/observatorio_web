@@ -25,7 +25,7 @@ class UsersControllerTestCase extends CakeTestCase {
   var $fixtures = array( 'app.user', 'app.estudiante', 'app.profesor', 'app.tutor', 'app.inversionista', 'app.visita');
 
   function startTest() {
-			$this->Users = new TestUsersController();
+		$this->Users = new TestUsersController();
     $this->Users->constructClasses();
     $this->Users->Component->initialize($this->Posts);
   }

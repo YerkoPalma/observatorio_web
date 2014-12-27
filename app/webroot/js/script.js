@@ -83,7 +83,7 @@ $(document).ready(function(){
 			$(divTarget).append("<span class='label label-primary'>"+tag+"<a class='rm-tag'>&times;</a></span>");
 			$(inputTag).val("");
 
-			var tagsValue = $(inputTarget).val();
+			var tagsValue = $(inputTarget).val().trim();
 			if (tagsValue != ""){
 				$(inputTarget).val(tagsValue + "," + tag);
 			}
@@ -109,40 +109,196 @@ $(document).ready(function(){
 		addTag(e, "#PropuestaPalabrasClave","#PropuestaTags",  ".tags");
 	});
 
-	$("#newTagPartners").click( function(e){
+	$(".add #newTagPartners").click( function(e){
 		addTag(e, "#Propuesta0Tags", "#Propuesta0PalabrasClave", "#PartnersTags");
 	});
 
-	$("#newTagActivities").click( function(e){
+	$(".add #newTagActivities").click( function(e){
 		addTag(e, "#Propuesta1Tags", "#Propuesta1PalabrasClave", "#ActivitiesTags");
 	});
 
-	$("#newTagPropositions").click( function(e){
+	$(".add #newTagPropositions").click( function(e){
 		addTag(e, "#Propuesta2Tags", "#Propuesta2PalabrasClave", "#PropositionsTags");
 	});
 
-	$("#newTagRelationships").click( function(e){
+	$(".add #newTagRelationships").click( function(e){
 		addTag(e, "#Propuesta3Tags", "#Propuesta3PalabrasClave", "#RelationshipsTags");
 	});
 
-	$("#newTagSegments").click( function(e){
+	$(".add #newTagSegments").click( function(e){
 		addTag(e, "#Propuesta4Tags", "#Propuesta4PalabrasClave", "#SegmentsTags");
 	});
 
-	$("#newTagResources").click( function(e){
+	$(".add #newTagResources").click( function(e){
 		addTag(e, "#Propuesta5Tags", "#Propuesta5PalabrasClave", "#ResourcesTags");
 	});
 
-	$("#newTagChannels").click( function(e){
+	$(".add #newTagChannels").click( function(e){
 		addTag(e, "#Propuesta6Tags", "#Propuesta6PalabrasClave", "#ChannelsTags");
 	});
 
-	$("#newTagCosts").click( function(e){
+	$(".add #newTagCosts").click( function(e){
 		addTag(e, "#Propuesta7Tags", "#Propuesta7PalabrasClave", "#CostsTags");
 	});
 
-	$("#newTagRevenueStreams").click( function(e){
+	$(".add #newTagRevenueStreams").click( function(e){
 		addTag(e, "#Propuesta8Tags", "#Propuesta8PalabrasClave", "#RevenueStreamsTags");
 	});
 
+	$(".edit #newTagPartners").click( function(e){
+		addTag(e, "#ConceptoComparacion0Tags", "#ConceptoComparacion0PalabrasClave", "#PartnersTags");
+	});
+
+	$(".edit #newTagActivities").click( function(e){
+		addTag(e, "#ConceptoComparacion1Tags", "#ConceptoComparacion1PalabrasClave", "#ActivitiesTags");
+	});
+
+	$(".edit #newTagPropositions").click( function(e){
+		addTag(e, "#ConceptoComparacion2Tags", "#ConceptoComparacion2PalabrasClave", "#PropositionsTags");
+	});
+
+	$(".edit #newTagRelationships").click( function(e){
+		addTag(e, "#ConceptoComparacion3Tags", "#ConceptoComparacion3PalabrasClave", "#RelationshipsTags");
+	});
+
+	$(".edit #newTagSegments").click( function(e){
+		addTag(e, "#ConceptoComparacion4Tags", "#ConceptoComparacion4PalabrasClave", "#SegmentsTags");
+	});
+
+	$(".edit #newTagResources").click( function(e){
+		addTag(e, "#ConceptoComparacion5Tags", "#ConceptoComparacion5PalabrasClave", "#ResourcesTags");
+	});
+
+	$(".edit #newTagChannels").click( function(e){
+		addTag(e, "#ConceptoComparacion6Tags", "#ConceptoComparacion6PalabrasClave", "#ChannelsTags");
+	});
+
+	$(".edit #newTagCosts").click( function(e){
+		addTag(e, "#ConceptoComparacion7Tags", "#ConceptoComparacion7PalabrasClave", "#CostsTags");
+	});
+
+	$(".edit #newTagRevenueStreams").click( function(e){
+		addTag(e, "#ConceptoComparacion8Tags", "#ConceptoComparacion8PalabrasClave", "#RevenueStreamsTags");
+	});
+
+	$(".tags .rm-tag").click(function(e){
+		e.preventDefault();
+		var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
+		$(this).parent().remove();				
+		var tags = $("#PropuestaPalabrasClave").val().split(",");
+		tags = jQuery.grep(tags, function(value){
+			return value != tagToRemove;
+		});
+		tags = tags.join(",");
+		$("#PropuestaPalabrasClave").val(tags);
+	});
+
+	$("#PartnersTags .rm-tag").click(function(e){
+		e.preventDefault();
+		var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
+		$(this).parent().remove();				
+		var tags = $("#ConceptoComparacion0Tags").val().split(",");
+		tags = jQuery.grep(tags, function(value){
+			return value != tagToRemove;
+		});
+		tags = tags.join(",");
+		$("#ConceptoComparacion0Tags").val(tags);
+	});
+
+	$("#ActivitiesTags .rm-tag").click(function(e){
+		e.preventDefault();
+		var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
+		$(this).parent().remove();				
+		var tags = $("#ConceptoComparacion1Tags").val().split(",");
+		tags = jQuery.grep(tags, function(value){
+			return value != tagToRemove;
+		});
+		tags = tags.join(",");
+		$("#ConceptoComparacion1Tags").val(tags);
+	});
+
+	$("#PropositionsTags .rm-tag").click(function(e){
+		e.preventDefault();
+		var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
+		$(this).parent().remove();				
+		var tags = $("#ConceptoComparacion2Tags").val().split(",");
+		tags = jQuery.grep(tags, function(value){
+			return value != tagToRemove;
+		});
+		tags = tags.join(",");
+		$("#ConceptoComparacion2Tags").val(tags);
+	});
+
+	$("#RelationshipsTags .rm-tag").click(function(e){
+		e.preventDefault();
+		var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
+		$(this).parent().remove();				
+		var tags = $("#ConceptoComparacion3Tags").val().split(",");
+		tags = jQuery.grep(tags, function(value){
+			return value != tagToRemove;
+		});
+		tags = tags.join(",");
+		$("#ConceptoComparacion3Tags").val(tags);
+	});
+
+	$("#SegmentsTags .rm-tag").click(function(e){
+		e.preventDefault();
+		var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
+		$(this).parent().remove();				
+		var tags = $("#ConceptoComparacion4Tags").val().split(",");
+		tags = jQuery.grep(tags, function(value){
+			return value != tagToRemove;
+		});
+		tags = tags.join(",");
+		$("#ConceptoComparacion4Tags").val(tags);
+	});
+
+	$("#ResourcesTags .rm-tag").click(function(e){
+		e.preventDefault();
+		var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
+		$(this).parent().remove();				
+		var tags = $("#ConceptoComparacion5Tags").val().split(",");
+		tags = jQuery.grep(tags, function(value){
+			return value != tagToRemove;
+		});
+		tags = tags.join(",");
+		$("#ConceptoComparacion5Tags").val(tags);
+	});
+
+	$("#ChannelsTags .rm-tag").click(function(e){
+		e.preventDefault();
+		var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
+		$(this).parent().remove();				
+		var tags = $("#ConceptoComparacion6Tags").val().split(",");
+		tags = jQuery.grep(tags, function(value){
+			return value != tagToRemove;
+		});
+		tags = tags.join(",");
+		$("#ConceptoComparacion6Tags").val(tags);
+	});
+
+	$("#CostsTags .rm-tag").click(function(e){
+		e.preventDefault();
+		var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
+		$(this).parent().remove();				
+		var tags = $("#ConceptoComparacion7Tags").val().split(",");
+		tags = jQuery.grep(tags, function(value){
+			return value != tagToRemove;
+		});
+		tags = tags.join(",");
+		$("#ConceptoComparacion7Tags").val(tags);
+	});
+
+	$("#RevenueStreamsTags .rm-tag").click(function(e){
+		e.preventDefault();
+		var tagToRemove = $(this).parent().text().slice(0, $(this).parent().text().length - 1);				
+		$(this).parent().remove();				
+		var tags = $("#ConceptoComparacion8Tags").val().split(",");
+		tags = jQuery.grep(tags, function(value){
+			return value != tagToRemove;
+		});
+		tags = tags.join(",");
+		$("#ConceptoComparacion8Tags").val(tags);
+	});
+	
 });

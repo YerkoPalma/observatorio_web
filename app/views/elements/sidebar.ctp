@@ -18,19 +18,26 @@
 				<?php 
 					if( isset($profesor) ){
 						$pend_badge = '';
+						$idea_badge = '';
+
 						if ( isset($pendientes) && $pendientes > 0){
 							$pend_badge = ' <span class="badge">'.$pendientes.'</span>';
 						}
+						if ( isset($nuevasIdeas) && $nuevasIdeas > 0){
+							$idea_badge = ' <span class="badge">'.$nuevasIdeas.'</span>';
+						}
 						echo $html->link('Estudiantes'.$pend_badge, array('controller' => 'estudiantes', 'action' => 'index'), array('class' => 'btn btn-default btn-block', 'escape' => false));
+						echo $html->link('Ideas'.$idea_badge, array('controller' => 'propuestas', 'action' => 'index'), array('class' => 'btn btn-default btn-block', 'escape' => false));
+					}else{
+						echo $html->link('Ideas', array('controller' => 'propuestas', 'action' => 'index'), array('class' => 'btn btn-default btn-block'));
 					}
 				?>
-				<?php echo $html->link('Ideas', array('controller' => 'propuestas', 'action' => 'index'), array('class' => 'btn btn-default btn-block'))?>
 				<?php if( trim( $user['estado'] ) == "pendiente" ): ?>
 					<?php echo $html->link('Proyecto', array('controller' => 'users', 'action' => 'project'), array('class' => 'btn btn-default btn-block', 'disabled' => 'disabled'))?>
 					<?php echo $html->link('Curso', array('controller' => 'propuestas', 'action' => 'index'), array('class' => 'btn btn-default btn-block', 'disabled' => 'disabled'))?>
 				<?php else: ?>
 			  	<?php echo $html->link('Proyecto', array('controller' => 'users', 'action' => 'project'), array('class' => 'btn btn-default btn-block'))?>
-			  	<?php echo $html->link('Curso', array('controller' => 'propuestas', 'action' => 'index'), array('class' => 'btn btn-default btn-block'))?>
+			  	<?php echo $html->link('Curso', array('controller' => 'estudiantes', 'action' => 'curso'), array('class' => 'btn btn-default btn-block'))?>
 			  <?php endif; ?>
 			  
 			</div>

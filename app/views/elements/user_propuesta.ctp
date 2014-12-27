@@ -26,7 +26,11 @@
     <?php $counter = 0;?>
     <?php foreach ($userPropuestas as $uPropuesta):?>
       <div role="tabpanel" class="tab-pane fade <?php if ($counter == 0) {echo "in active";} ?>" id="<?php echo str_replace(" ", "_", trim($uPropuesta['nombre_propuesta'])); ?>">        
-      <h2><?php echo $uPropuesta['nombre_propuesta'] ?></h2>
+      <h2>
+        <?php echo $uPropuesta['nombre_propuesta'] ?>
+        <?php $pencilIcon = "<span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>"; 
+        echo $html->link($pencilIcon, array('action' => 'edit', $uPropuesta['id']), array('escape' => false) );?>
+      </h2>
       <p><?php echo $uPropuesta['descripcion_propuesta'] ?></p>
       </div>
       <?php $counter++; ?>

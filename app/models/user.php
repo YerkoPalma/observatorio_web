@@ -3,6 +3,11 @@ class User extends AppModel{
 	var $name = 'User';	
   #var $primaryKey = 'users_id';
   var $hasOne = array('Estudiante', 'Profesor','Tutor','Inversionista','Visita');
+  var $hasMany = array(
+    'Propuesta' => array(
+      'className' => 'Propuesta',
+      'foreignKey' => 'user_id')
+    );
 	var $validate = array(
     'nombre' => array(      
       'isUnique' => array(
