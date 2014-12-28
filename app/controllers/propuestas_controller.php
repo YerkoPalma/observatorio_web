@@ -3,7 +3,7 @@ class PropuestasController extends AppController {
 
 	var $name = 'Propuestas';
 	var $helpers = array('Html','Feed','Js','Ajax');
-	var $components = array('Email','Auth', 'Session', 'RequestHandler');
+	var $components = array('Email','Auth', 'Session', 'RequestHandler', 'Comparador');
 
 
 	function beforeFilter() {
@@ -54,7 +54,9 @@ class PropuestasController extends AppController {
 			$this->loadModel('TipoIdea');
 			$this->set('tiposIdeas', $this->TipoIdea->find('all') );
 			$this->loadModel( 'Profesor' );
-			
+			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+																																													'Propuesta.estado_propuesta_id' => 11)) );
+				$this->set('propuestaCandidata', $propuestaCandidata);
 			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
 				$this->loadModel( 'Estudiante' );
 				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
@@ -81,7 +83,9 @@ class PropuestasController extends AppController {
 			//declarar los tipos de ideaas
 			$this->loadModel('TipoIdea');
 			$this->set('tiposIdeas', $this->TipoIdea->find('all') );
-
+			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+																																													'Propuesta.estado_propuesta_id' => 11)) );
+				$this->set('propuestaCandidata', $propuestaCandidata);
 			$this->layout = 'connected';
 			$this->set('title_for_layout', 'Proyectos Ingeniería Civil Informática | Propuestas');
 
@@ -125,7 +129,9 @@ class PropuestasController extends AppController {
 			$this->set('user', current( $this->Auth->user()) );
 			$this->layout = 'connected';
 			$this->loadModel( 'Profesor' );
-			
+			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+																																													'Propuesta.estado_propuesta_id' => 11)) );
+				$this->set('propuestaCandidata', $propuestaCandidata);
 			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
 				$this->loadModel( 'Estudiante' );
 				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
@@ -161,7 +167,7 @@ class PropuestasController extends AppController {
 					$this->redirect(array('action' => 'index'));
 				}
 			}else{
-				$this->Session->setFlash("asad".$this->params['propuestaid'], 'flash_warning');
+				$this->Session->setFlash("asad".$propuestaid, 'flash_warning');
 				$this->redirect(array('action' => 'show', $propuestaid));
 			}
 		}
@@ -173,15 +179,17 @@ class PropuestasController extends AppController {
 		$this->set("user", current($this->Auth->user()) );
 		$this->layout = 'connected';
 		$this->loadModel( 'Profesor' );
-			
-			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
-				$this->loadModel( 'Estudiante' );
-				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
-				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
-				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
-				$this->set('pendientes', $pendientes);
-				$this->set('nuevasIdeas', $ideasNuevas);
-			}
+		$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+																																													'Propuesta.estado_propuesta_id' => 11)) );
+				$this->set('propuestaCandidata', $propuestaCandidata);
+		if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
+			$this->loadModel( 'Estudiante' );
+			$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
+			$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+			$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
+			$this->set('pendientes', $pendientes);
+			$this->set('nuevasIdeas', $ideasNuevas);
+		}
 	}
 
 	function edit($id){
@@ -191,7 +199,9 @@ class PropuestasController extends AppController {
 				$this->set('tiposIdeas', $this->Propuesta->TipoIdea->find('all'));
 
 				$this->loadModel( 'Profesor' );
-			
+				$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+																																													'Propuesta.estado_propuesta_id' => 11)) );
+				$this->set('propuestaCandidata', $propuestaCandidata);
 			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
 				$this->loadModel( 'Estudiante' );
 				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
@@ -229,7 +239,7 @@ class PropuestasController extends AppController {
 	        		}
 		        	$this->redirect(array('action' => 'show', $id));
 		        }else{
-		        	$this->setFlash("ups","flash_warning");
+		        	$this->Session->setFlash("ups","flash_warning");
 		        	$this->redirect(array('action' => 'index'));
 		        }
 	        }
@@ -238,6 +248,99 @@ class PropuestasController extends AppController {
 	      	$this->set('propuestas', $this->Propuesta->findAllByUserId($this->Auth->user('id')));
 	      }
 			}
+		}
+
+		#funcion para mostrar la pagina de comparacion
+		function comparar($id1 = NULL){
+			
+			$this->set("user", current($this->Auth->user()) );
+			$this->layout = 'connected';
+			$this->loadModel( 'Profesor' );
+			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+																																													'Propuesta.estado_propuesta_id' => 11)) );
+				$this->set('propuestaCandidata', $propuestaCandidata);
+			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
+				$this->loadModel( 'Estudiante' );
+				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
+				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
+				$propuestas = $this->Propuesta->find('all', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
+				$this->set('pendientes', $pendientes);
+				$this->set('nuevasIdeas', $ideasNuevas);
+				$this->set('propuestas', $propuestas);				
+			}else{
+				$this->Session->setFlash("Solo los profesores pueden comparar propuestas", "flash_warning");
+				$this->redirect(array("action" => "index"));
+			}
+		}
+
+		function compare($id){
+			//si efectivamente se desea comparar una 
+			if( !is_null($id) && $this->RequestHandler->isAjax()){
+				//Primero preparo los datos para comparar
+				$this->Propuesta->id = $id;
+				$propuesta = $this->Propuesta->read();
+				$conceptos = $propuesta['ConceptoComparacion'];
+				foreach ($conceptos as $concepto) {
+					$propuestaObjetivo[trim(strtolower($concepto['titulo_concepto_comparacion']))] = explode(",", $concepto['tags']);
+				}
+				$propuestaObjetivo['descripcion'] = explode(",", $propuesta['Propuesta']['palabras_clave']);
+
+				//por seguridad, borro las variables antes usadas
+				//unset($propuesta);
+				//unset($conceptos);					
+
+				//ahora preparo el resto de las propuestas
+				$propuestas = $this->Propuesta->find('all');
+				$propuestasFormateadas = array();
+				foreach ($propuestas as $propuesta) {
+					//evito compararme conmigo mismo
+					if($propuesta['Propuesta']['id'] != $id && $propuesta['Propuesta']['estado_propuesta_id'] != 12){
+						$conceptos = $propuesta['ConceptoComparacion'];
+						foreach ($conceptos as $concepto) {
+							$nuevaPropuesta[trim(strtolower($concepto['titulo_concepto_comparacion']))] = explode(",", $concepto['tags']);
+						}
+						$nuevaPropuesta['descripcion'] = explode(",", $propuesta['Propuesta']['palabras_clave']);
+						//asigno el id solo para identificarla luego de compararla
+						$nuevaPropuesta['id'] = $propuesta['Propuesta']['id'];
+						array_push($propuestasFormateadas, $nuevaPropuesta);
+					}
+				}
+				$this->set('propuesta', $propuestaObjetivo);
+				$this->set('propuestasFormateadas', $propuestasFormateadas);
+
+				//unset($propuestas);
+
+				//ahora hago la comparacion
+				if( $this->Propuesta->find('all', array('conditions' => array('Propuesta.estado_propuesta_id <>' => '12', 'Propuesta.id <>' => $id))) ){
+					$best = 0;
+					$propuestaSimilar = array();
+					foreach ($propuestasFormateadas as $propuesta) {
+						if ($this->Comparador->compare($propuestaObjetivo, $propuesta) > $best){
+							$best = $this->Comparador->compare($propuestaObjetivo, $propuesta);
+							$propuestaSimilar = $this->Propuesta->findById($propuesta['id']);
+						}
+					}
+					$this->set('best', $best);
+					$this->set('propuestaSimilar', $propuestaSimilar);
+				}else{
+					$this->set('warning', "Lamentablemente no existen más propuestas con las que comparar");
+				}
+			}
+		}
+
+		function aceptar($id){
+			#evito que me pida una vista para esta accion
+      $this->autoRender = false;
+      $propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+																																													'Propuesta.estado_propuesta_id' => 11)) );
+				$this->set('propuestaCandidata', $propuestaCandidata);
+			$propuesta = $this->Propuesta->findById($id);
+			if( $propuesta['Propuesta']['estado_propuesta_id'] == 10 ){
+				$this->Propuesta->id = $id;
+				$this->Propuesta->saveField('estado_propuesta_id', 11);
+			}
+			$this->redirect(array('action' => 'comparar'));
 		}
 }
 ?>

@@ -36,10 +36,14 @@
 					<?php echo $html->link('Proyecto', array('controller' => 'users', 'action' => 'project'), array('class' => 'btn btn-default btn-block', 'disabled' => 'disabled'))?>
 					<?php echo $html->link('Curso', array('controller' => 'propuestas', 'action' => 'index'), array('class' => 'btn btn-default btn-block', 'disabled' => 'disabled'))?>
 				<?php else: ?>
-			  	<?php echo $html->link('Proyecto', array('controller' => 'users', 'action' => 'project'), array('class' => 'btn btn-default btn-block'))?>
+					<?php if( isset($propuestaCandidata) ):?>
+						<?php echo $html->link('Proyecto <span class="label label-primary">nuevo</span>', array('controller' => 'proyectos', 'action' => 'add',$propuestaCandidata['Propuesta']['id']), array('class' => 'btn btn-success btn-block','escape' => false))?>
+					<?php else:?>
+			  		<?php echo $html->link('Proyecto', array('controller' => 'users', 'action' => 'project'), array('class' => 'btn btn-default btn-block'))?>
+			  	<?php endif;?>
 			  	<?php echo $html->link('Curso', array('controller' => 'estudiantes', 'action' => 'curso'), array('class' => 'btn btn-default btn-block'))?>
 			  <?php endif; ?>
-			  
+			  <!--<pre><?php print_r($propuestaCandidata);?></pre>-->
 			</div>
 		</div>
 	</div>	

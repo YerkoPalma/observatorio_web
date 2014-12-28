@@ -14,7 +14,9 @@
 			$this->loadModel('User');
 			$this->loadModel( 'Profesor' );
 			$this->loadModel( 'Propuesta' );
-
+			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+																																													'Propuesta.estado_propuesta_id' => 11)) );
+				$this->set('propuestaCandidata', $propuestaCandidata);
 			if ( $this->Auth->user() ) {
 				$this->set('user', current($this->Auth->user()) );
 				$this->layout = 'connected';
@@ -45,6 +47,9 @@
 				$this->set( 'estudiantes', $this->Estudiante->User->find( 'all', array( "conditions" => array("Estudiante.estado" => "activo")) ) );		
 				$this->loadModel( 'Profesor' );
 				$this->loadModel( 'Propuesta' );
+				$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+																																													'Propuesta.estado_propuesta_id' => 11)) );
+				$this->set('propuestaCandidata', $propuestaCandidata);
         if ( is_array( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ) ){
           
           $this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );

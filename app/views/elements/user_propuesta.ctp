@@ -29,7 +29,12 @@
       <h2>
         <?php echo $uPropuesta['nombre_propuesta'] ?>
         <?php $pencilIcon = "<span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>"; 
-        echo $html->link($pencilIcon, array('action' => 'edit', $uPropuesta['id']), array('escape' => false) );?>
+        if( $uPropuesta['estado_propuesta_id'] == 10 ){
+          echo $html->link($pencilIcon, array('action' => 'edit', $uPropuesta['id']), array('escape' => false) );
+        }else{
+          echo $html->link($pencilIcon, array('action' => 'addcanvas', $uPropuesta['id']), array('escape' => false) );
+        }
+        ?>
       </h2>
       <p><?php echo $uPropuesta['descripcion_propuesta'] ?></p>
       </div>

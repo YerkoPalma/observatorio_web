@@ -12,8 +12,16 @@
       </div>
     </div>
     <div class="col-md-8">
-      <h3>Agregar nueva propuesta</h3>
-      <p>Aún no has agregado una propuesta de proyecto, ingresa una siguiendo el botón verde a la izuierda</p>
+      <?php if (isset($profesor)):?>
+        <?php if (isset($nuevasIdeas) && $nuevasIdeas > 0):?>
+          <h3>Existen nuevas propuestas que puedes <?php echo $html->link('comparar', array('controller' => 'propuestas', 'action' => 'comparar'));?></h3>
+        <?php else:?>
+          <h3>Aún no se han registrado nuevas propuestas</h3>
+        <?php endif;?>
+      <?php else:?>
+        <h3>Agregar nueva propuesta</h3>
+        <p>Aún no has agregado una propuesta de proyecto, ingresa una siguiendo el botón verde a la izuierda</p>
+      <?php endif;?>
     </div>
   </div>
 </div>
