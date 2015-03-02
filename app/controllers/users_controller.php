@@ -249,6 +249,7 @@
       $this->set('show_user',current($user));
       $this->loadModel( 'Propuesta' );
       $this->set('propuestas', $this->Propuesta->find('all') );
+      $this->set( 'estudiante', $this->User->Estudiante->findById( $this->Auth->user('id') ));
       $propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
                                                                                           'Propuesta.estado_propuesta_id' => 11)) );
         $this->set('propuestaCandidata', $propuestaCandidata);
@@ -276,6 +277,7 @@
         $this->layout = 'connected';
         $this->loadModel( 'Profesor' );
         $this->loadModel( 'Propuesta' );
+        $this->set( 'estudiante', $this->User->Estudiante->findById( $this->Auth->user('id') ));
         $propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
                                                                                           'Propuesta.estado_propuesta_id' => 11)) );
         $this->set('propuestaCandidata', $propuestaCandidata);

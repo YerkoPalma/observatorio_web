@@ -17,12 +17,14 @@
 				$this->set('user', current($this->Auth->user()) );
 				$this->loadModel( 'Profesor' );
 				$this->loadModel( 'Propuesta' );
+				$this->loadModel( 'Estudiante' );
+				$this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
 				$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
 																																													'Propuesta.estado_propuesta_id' => 11)) );
 				$this->set('propuestaCandidata', $propuestaCandidata);
 				
 				if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
-					$this->loadModel( 'Estudiante' );
+					
 					$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
 					$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
 					$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));

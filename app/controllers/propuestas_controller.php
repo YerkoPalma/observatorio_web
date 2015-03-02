@@ -54,11 +54,13 @@ class PropuestasController extends AppController {
 			$this->loadModel('TipoIdea');
 			$this->set('tiposIdeas', $this->TipoIdea->find('all') );
 			$this->loadModel( 'Profesor' );
+			$this->loadModel( 'Estudiante' );
+			$this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
 			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
 																																													'Propuesta.estado_propuesta_id' => 11)) );
 				$this->set('propuestaCandidata', $propuestaCandidata);
 			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
-				$this->loadModel( 'Estudiante' );
+				
 				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
 				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
 				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
@@ -82,17 +84,19 @@ class PropuestasController extends AppController {
 			$this->set('user', current($this->Auth->user()) );
 			//declarar los tipos de ideaas
 			$this->loadModel('TipoIdea');
+			$this->loadModel( 'Estudiante' );
+			$this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
 			$this->set('tiposIdeas', $this->TipoIdea->find('all') );
 			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
 																																													'Propuesta.estado_propuesta_id' => 11)) );
-				$this->set('propuestaCandidata', $propuestaCandidata);
+			$this->set('propuestaCandidata', $propuestaCandidata);
 			$this->layout = 'connected';
 			$this->set('title_for_layout', 'Proyectos Ingeniería Civil Informática | Propuestas');
 
 			$this->loadModel( 'Profesor' );
 			
 			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
-				$this->loadModel( 'Estudiante' );
+				
 				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
 				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
 				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
@@ -129,11 +133,13 @@ class PropuestasController extends AppController {
 			$this->set('user', current( $this->Auth->user()) );
 			$this->layout = 'connected';
 			$this->loadModel( 'Profesor' );
+			$this->loadModel( 'Estudiante' );
+			$this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
 			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
 																																													'Propuesta.estado_propuesta_id' => 11)) );
 				$this->set('propuestaCandidata', $propuestaCandidata);
 			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
-				$this->loadModel( 'Estudiante' );
+				
 				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
 				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
 				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
@@ -179,11 +185,13 @@ class PropuestasController extends AppController {
 		$this->set("user", current($this->Auth->user()) );
 		$this->layout = 'connected';
 		$this->loadModel( 'Profesor' );
+		$this->loadModel( 'Estudiante' );
+		$this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
 		$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
 																																													'Propuesta.estado_propuesta_id' => 11)) );
 				$this->set('propuestaCandidata', $propuestaCandidata);
 		if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
-			$this->loadModel( 'Estudiante' );
+			
 			$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
 			$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
 			$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
@@ -197,13 +205,14 @@ class PropuestasController extends AppController {
 				$this->set('user', current($this->Auth->user()) );
 				$this->layout = 'connected';
 				$this->set('tiposIdeas', $this->Propuesta->TipoIdea->find('all'));
-
+				$this->loadModel( 'Estudiante' );
+				$this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
 				$this->loadModel( 'Profesor' );
 				$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
 																																													'Propuesta.estado_propuesta_id' => 11)) );
 				$this->set('propuestaCandidata', $propuestaCandidata);
 			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
-				$this->loadModel( 'Estudiante' );
+				
 				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
 				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
 				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
@@ -256,11 +265,13 @@ class PropuestasController extends AppController {
 			$this->set("user", current($this->Auth->user()) );
 			$this->layout = 'connected';
 			$this->loadModel( 'Profesor' );
+			$this->loadModel( 'Estudiante' );
+			$this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
 			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
 																																													'Propuesta.estado_propuesta_id' => 11)) );
 				$this->set('propuestaCandidata', $propuestaCandidata);
 			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
-				$this->loadModel( 'Estudiante' );
+				
 				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
 				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
 				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
