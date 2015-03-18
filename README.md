@@ -1,9 +1,9 @@
 Observatorio Web
 ================
 
-1.  ###Lista de usuarios
-2.  ###Navegación
-3.  ###Pendientes
+1.  ### Lista de usuarios
+2.  ### Navegación
+3.  ### Pendientes
 
 Lista de usuarios
 =================

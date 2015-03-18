@@ -301,4 +301,7 @@ $(document).ready(function(){
 		$("#ConceptoComparacion8Tags").val(tags);
 	});
 	
+	$('.input-group.date').datepicker({
+		autoclose: true
+	});
 });

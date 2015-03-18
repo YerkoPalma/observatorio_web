@@ -249,10 +249,11 @@
       $this->set('show_user',current($user));
       $this->loadModel( 'Propuesta' );
       $this->set('propuestas', $this->Propuesta->find('all') );
-      $this->set( 'estudiante', $this->User->Estudiante->findById( $this->Auth->user('id') ));
+      $estudiante = $this->User->Estudiante->findByRut( $user['User']['rut'] );
+      $this->set( 'estudiante', $estudiante);
       $propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
                                                                                           'Propuesta.estado_propuesta_id' => 11)) );
-        $this->set('propuestaCandidata', $propuestaCandidata);
+      $this->set('propuestaCandidata', $propuestaCandidata);
       if ( $this->Auth->user() ) {      
         $this->set('user',current($this->Auth->user()));  
         $this->layout = 'connected';
@@ -265,6 +266,15 @@
           $ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
           $this->set('pendientes', $pendientes);
           $this->set('nuevasIdeas', $ideasNuevas);
+        }
+        if (is_array( $estudiante )){
+          $projectID =  $estudiante['Estudiante']['proyecto_id'];
+          $this->set('proyectoID', $projectID);
+          if (isset($projectID) && !empty($projectID) ){
+            $project = $this->User->Estudiante->Proyecto->findById($projectID);
+            $this->set('proyecto', $project); 
+            #Agregar miembros e info del proyecto                    
+          }
         }
       }       
     }
@@ -309,6 +319,10 @@
       }  
     }
 
+    /**
+     * Cambia la contraseña de un usuario
+     * @return Redirect
+     */
     function changePassword(){
 
       #evito que me pida una vista para esta accion
@@ -338,7 +352,10 @@
       }
     }
 
-    #función que acepta un estudiante (le cambia el estado)
+    /**
+     * Acepta un estudiante cambiandole el estado en la base de datos
+     * @return Redirect
+     */
     function accept_student(){
       #evito que me pida una vista para esta accion
       $this->autoRender = false;
@@ -353,6 +370,23 @@
 
       $this->Session->setFlash('El estudiante '.$this->User->Estudiante->field( 'nombre' ).' ha sido exitosamente actualizado', 'flash_success');
       $this->redirect(array('controller' => 'estudiantes', 'action' => 'index'));
+    }
+
+    /**
+     * Redirecciona al usuario que no tiene un proyecto aceptado
+     * @return Redirect()
+     */
+    function project(){
+      if ( $this->Auth->user() ){
+      $this->set('user', current( $this->Auth->user()) );
+      $this->layout = 'connected';
+      $this->loadModel( 'Profesor' );
+      $this->loadModel( 'Estudiante' );
+      $this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
+      #$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+      #                                                                                    'Propuesta.estado_propuesta_id' => 11)) );
+      #$this->set('propuestaCandidata', $propuestaCandidata);
+      }
     }
 		
 	}

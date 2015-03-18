@@ -7,14 +7,16 @@
   <!-- Incluir ficheros y scripts externos aquí (Mirar el ayudante HTML para más información -->
   <?php echo $this->Html->css('bootstrap.min'); ?>
   <?php echo $this->Html->css('docs.min'); ?>
-  
-  <?php echo $this->Html->css('custom'); ?>  
+  <?php echo $this->Html->css('custom'); ?> 
+  <?php echo $this->Html->css('datepicker3'); ?>  
   
   <?php echo $this->Html->script('jquery.min'); ?>
   <?php echo $this->Html->script('bootstrap.min'); ?>   
+  
+  <?php echo $this->Html->script('bootstrap-datepicker'); ?>
   <?php echo $this->Html->script('script'); ?>
   <?php #echo $html->script('prototype'); ?>
-  <?php echo $html->script('scriptaculous'); ?>
+  <?php #echo $html->script('scriptaculous'); ?>
 
 </head>
 <body>

@@ -1,0 +1,1 @@
+<h1>No tienes proyecto aceptado</h1>

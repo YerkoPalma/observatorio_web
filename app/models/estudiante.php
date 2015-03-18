@@ -7,6 +7,10 @@ class Estudiante extends AppModel{
     'User' => array(
       'className'   => 'User',
       'foreignKey'  => 'user_id'
+      ),
+    'Proyecto' => array(
+      'className'   =>  'Proyecto',
+      'foreignKey'  =>  'proyecto_id'
       )
     );
 	var $validate = array(

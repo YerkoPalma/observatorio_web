@@ -13,6 +13,12 @@ class Propuesta extends AppModel{
       )
     #'EstadoPropuesta'
     );
+  var $hasOne = array(
+    'Proyecto' => array(
+      'className' => 'Proyecto',
+      'dependent'    => true
+    )
+  );
   var $hasMany = array(
     'ConceptoComparacion' => array(
       'className' => 'ConceptoComparacion',

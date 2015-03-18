@@ -6,7 +6,7 @@
 <br>
 <br>
 <?php 
-	echo $form->create(null, array('url' => array('controller' => 'proyectos', 'action' => 'add', $propuestaCandidata['Propuesta']['id']),'inputDefaults' => array('label' => false,'div' => false)));
+	echo $form->create(null, array('type' => 'file', 'url' => array('controller' => 'proyectos', 'action' => 'add', $propuestaCandidata['Propuesta']['id']),'inputDefaults' => array('label' => false,'div' => false)));
 ?>
 <div class="form-group has-feedback">
   <label class="control-label" for="inputSuccess2">Buscar compañeros de proyecto</label>
@@ -21,8 +21,9 @@
 			<?php $options[$estudiante['Estudiante']['id']] = $estudiante['Estudiante']['nombre'];?>
 		<?php endif;?>
 	<?php endforeach;?>
-		<?php echo $form->input('estudiante_id', array( 'multiple' => 'checkbox', 'options' => $options, 'class' => 'text-center'));?>
-	
+	<?php echo $form->input('estudiante_id', array( 'multiple' => 'checkbox', 'options' => $options, 'class' => 'text-center'));?>
+	<?php echo $this->Form->input('Proyecto.logo', array('type' => 'file')); ?>
+	<?php echo $this->Form->input('Proyecto.logo_dir', array('type' => 'hidden')); ?>
 </div>
 <?php echo $this->Form->submit('Inscribir proyecto',array('class'=>'btn btn-default pull-right', 'div' => false)); ?>
 <?php echo $form->end();?>
