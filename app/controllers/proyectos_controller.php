@@ -2,26 +2,41 @@
 class ProyectosController extends AppController {
 
 	var $name = 'Proyectos';
-	var $helpers = array('Html');
+	var $helpers = array('Html', 'Feed');
 	var $components = array('Auth', 'Session');
 
 
 	function beforeFilter() {
     parent::beforeFilter();
     $this->Auth->allowedActions = array('*');
+    if ( $this->Auth->user() ){
+			$this->set('user', current($this->Auth->user()) );
+			$this->loadModel( 'Profesor' );
+			$this->loadModel( 'Propuesta' );
+			$this->loadModel( 'Estudiante' );
+			$this->layout = "connected";
+			$this->set( 'estudiante', $this->Estudiante->findByRut( $this->Auth->user('rut') ));
+			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+																																												'Propuesta.estado_propuesta_id' => 11)) );
+			$this->set('propuestaCandidata', $propuestaCandidata);
+			
+			
+			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
+				
+				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
+				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
+				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
+        $this->set('pendientes', $pendientes);
+        $this->set('nuevasIdeas', $ideasNuevas);
+			}
+		}else{
+			$this->Session->setFlash("No puedes ingresar aquí, debes iniciar sesión primero", "flash_warning");
+			$this->redirect(array("controller" => "pages", "action" => "home"));
+		}
 	}
 
 	function add($id){
-		if($this->Auth->user()){
-			$this->set('user', current($this->Auth->user()) );
-			$this->layout = 'connected';
-			$this->loadModel( 'Propuesta' );
-			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
-																																													'Propuesta.estado_propuesta_id' => 11)) );
-			$this->set('propuestaCandidata', $propuestaCandidata);
-			$this->set('estudiantes', $this->Propuesta->User->Estudiante->find('all'));
-			
-			$this->set( 'estudiante', $this->Propuesta->User->Estudiante->findById( $this->Auth->user('id') ));
+		
 			//Si es que la propuesta pertenece al usuario que inicio sesion y esta aprobada
 			if( $propuestaCandidata['Propuesta']['id'] == $id ){
 				//si se ingreso el nombre de los estudiantes
@@ -60,39 +75,17 @@ class ProyectosController extends AppController {
 				$this->Session->setFlash("No puedes ingresar aquí", "flash_warning");
 				$this->redirect(array("controller" => "pages", "action" => "home"));
 			}
-		}else{
-			$this->Session->setFlash("No puedes ingresar aquí, debes iniciar sesión primero", "flash_warning");
-			$this->redirect(array("controller" => "pages", "action" => "home"));
-		}
+		
 	}
 
 	function pauta($pauta_id = null, $proyecto_id = null){
-		if ( $this->Auth->user() ){
-			$this->set('user', current($this->Auth->user()) );
-			$this->loadModel( 'Profesor' );
-			$this->loadModel( 'Propuesta' );
-			$this->loadModel( 'Estudiante' );
-			$this->layout = "connected";
-			$this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
-			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
-																																												'Propuesta.estado_propuesta_id' => 11)) );
-			$this->set('propuestaCandidata', $propuestaCandidata);
-			$proyecto = $this->Proyecto->findById($proyecto_id);
-			$this->set('proyecto', $proyecto);
-			$pauta = $this->Proyecto->Pauta->findById($pauta_id);
-			$editable = $pauta['Pauta']['editable'];
-			$this->set('pauta_id', $pauta_id);
-			$this->set('editable', $editable);
-			
-			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
-				
-				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
-				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
-				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
-        $this->set('pendientes', $pendientes);
-        $this->set('nuevasIdeas', $ideasNuevas);
-			}
-
+		
+		$proyecto = $this->Proyecto->findById($proyecto_id);
+		$this->set('proyecto', $proyecto);
+		$pauta = $this->Proyecto->Pauta->findById($pauta_id);
+		$editable = $pauta['Pauta']['editable'];
+		$this->set('pauta_id', $pauta_id);
+		$this->set('editable', $editable);
 			#Si se esta editando una pauta, primero evaluo qué pauta es
 			if ( $this->data ){
 				$pauta_id = $this->data['Proyecto']['pauta_id'];				
@@ -118,7 +111,8 @@ class ProyectosController extends AppController {
 
 						#Agrego el informe
 						#Si ya existe el documento del proyecto
-						if ( $this->Proyecto->ProyectoDocumento->findByProyectoId( $proyecto_id ) ){
+						if ( $this->Proyecto->ProyectoDocumento->find( 'first', array( 'conditions' => array( 'ProyectoDocumento.proyecto_id' => $proyecto_id,
+																																																	'ProyectoDocumento.documento_generico_id' => 1))  ) ){
 							if ( isset($this->data['ProyectoDocumento']['documento']) && $this->data['ProyectoDocumento']['documento'] != ""){
 								$proyectoDocumento = $this->Proyecto->ProyectoDocumento->findByProyectoId( $proyecto_id);
 								$this->Proyecto->ProyectoDocumento->id = $proyectoDocumento['ProyectoDocumento']['id'];
@@ -133,20 +127,137 @@ class ProyectosController extends AppController {
 							$this->data['ProyectoDocumento']['proyecto_id'] = $proyecto_id;
 							$this->Proyecto->ProyectoDocumento->create();
 							$this->Proyecto->ProyectoDocumento->save( $this->data );
+							$this->Proyecto->ProyectoDocumento->saveField("documento_generico_id", $pauta_id);
 							$this->Session->setFlash("¡tus datos han sido modificados exitosamente!", "flash_success");
         		
 							$this->redirect(array('controller' => 'pages', 'action' => 'home'));
 						}
 
 						break;
-					
+
+					case 2:
+							
+							#Guardo los usuarios potenciales
+							if (isset($this->data['UsuarioPotencial']) && isset($this->data['UsuarioPotencial'][0]['Nombre']) && $this->data['UsuarioPotencial'][0]['Nombre'] != ""){
+								#Si ya se habia ingresado un usuario
+								if ($this->Proyecto->UsuarioPotencial->find('first', array('conditions' => array(
+																																						'UsuarioPotencial.proyecto_id' => $proyecto_id)))){
+									
+									$usuarioPotencial = $this->Proyecto->UsuarioPotencial->find('first', array('conditions' => array(
+																																						'UsuarioPotencial.proyecto_id' => $proyecto_id)));
+									$this->Proyecto->UsuarioPotencial->id = $usuarioPotencial['UsuarioPotencial']['id'];
+									$this->Proyecto->Mercado->id = $usuarioPotencial['UsuarioPotencial']['mercado_id'];
+									$this->Proyecto->Mercado->save( $this->data );
+								}else{
+									foreach ($this->data['UsuarioPotencial'] as $usuarioPotencial) {
+										#Creo y guardo el objeto de mercado
+										$this->Proyecto->Mercado->create();
+										$this->data['Mercado']['proyecto_id'] = $proyecto_id;
+										$this->data['Mercado']['nombre'] = $usuarioPotencial['Nombre'];
+										$this->data['Mercado']['descripcion'] = $usuarioPotencial['Descripcion'];
+										$this->data['Mercado']['imagen'] = $usuarioPotencial['imagen'];
+										$this->Proyecto->Mercado->save( $this->data );
+
+										#Ahora guardo el usuario potencial
+										$this->data['UsuarioPotencial']['mercado_id'] = $this->Proyecto->Mercado->getLastInsertID();
+										$this->data['UsuarioPotencial']['proyecto_id'] = $proyecto_id;
+										$this->Proyecto->Mercado->UsuarioPotencial->create();
+										$this->Proyecto->Mercado->UsuarioPotencial->save( $this->data );
+									}
+								}
+							}
+
+							#Guardo los complementarios
+							if (isset($this->data['Complementario']) && isset($this->data['Complementario'][0]['Nombre']) && $this->data['Complementario'][0]['Nombre'] != ""){
+								foreach ($this->data['Complementario'] as $usuarioPotencial) {
+									#Creo y guardo el objeto de mercado
+									$this->Proyecto->Mercado->create();
+									$this->data['Mercado']['proyecto_id'] = $proyecto_id;
+									$this->data['Mercado']['nombre'] = $usuarioPotencial['Nombre'];
+									$this->data['Mercado']['descripcion'] = $usuarioPotencial['Descripcion'];
+									$this->data['Mercado']['imagen'] = $usuarioPotencial['imagen'];
+									$this->Proyecto->Mercado->save( $this->data );
+
+									#Ahora guardo el usuario potencial
+									$this->data['Complementario']['mercado_id'] = $this->Proyecto->Mercado->getLastInsertID();
+									$this->data['Complementario']['proyecto_id'] = $proyecto_id;
+									$this->Proyecto->Mercado->Complementario->create();
+									$this->Proyecto->Mercado->Complementario->save( $this->data );
+								}
+							}
+
+							#Guardo las competencias
+							if (isset($this->data['Competencia']) && isset($this->data['Competencia'][0]['Nombre']) && $this->data['Competencia'][0]['Nombre'] != ""){
+								foreach ($this->data['Competencia'] as $usuarioPotencial) {
+									#Creo y guardo el objeto de mercado
+									$this->Proyecto->Mercado->create();
+									$this->data['Mercado']['proyecto_id'] = $proyecto_id;
+									$this->data['Mercado']['nombre'] = $usuarioPotencial['Nombre'];
+									$this->data['Mercado']['descripcion'] = $usuarioPotencial['Descripcion'];
+									$this->data['Mercado']['imagen'] = $usuarioPotencial['imagen'];
+									$this->Proyecto->Mercado->save( $this->data );
+
+									#Ahora guardo el usuario potencial
+									$this->data['Competencia']['mercado_id'] = $this->Proyecto->Mercado->getLastInsertID();
+									$this->data['Competencia']['proyecto_id'] = $proyecto_id;
+									$this->Proyecto->Mercado->Competencia->create();
+									$this->Proyecto->Mercado->Competencia->save( $this->data );
+								}
+							}
+
+							#Guardo los clientes potenciales
+							if (isset($this->data['ClientePotencial']) && isset($this->data['ClientePotencial'][0]['Nombre']) && $this->data['ClientePotencial'][0]['Nombre'] != ""){
+								foreach ($this->data['ClientePotencial'] as $usuarioPotencial) {
+									#Creo y guardo el objeto de mercado
+									$this->Proyecto->Mercado->create();
+									$this->data['Mercado']['proyecto_id'] = $proyecto_id;
+									$this->data['Mercado']['nombre'] = $usuarioPotencial['Nombre'];
+									$this->data['Mercado']['descripcion'] = $usuarioPotencial['Descripcion'];
+									$this->data['Mercado']['imagen'] = $usuarioPotencial['imagen'];
+									$this->Proyecto->Mercado->save( $this->data );
+
+									#Ahora guardo el usuario potencial
+									$this->data['ClientePotencial']['mercado_id'] = $this->Proyecto->Mercado->getLastInsertID();
+									$this->data['ClientePotencial']['proyecto_id'] = $proyecto_id;
+									$this->Proyecto->Mercado->ClientePotencial->create();
+									$this->Proyecto->Mercado->ClientePotencial->save( $this->data );
+								}
+							}
+
+							#Guardo el informe
+							#Si ya existe el documento del proyecto
+							if ( $this->Proyecto->ProyectoDocumento->find( 'first', array( 'conditions' => array( 'ProyectoDocumento.proyecto_id' => $proyecto_id,
+																																																	'ProyectoDocumento.documento_generico_id' => 2))  ) ){
+								if ( isset($this->data['ProyectoDocumento']['documento']) && $this->data['ProyectoDocumento']['documento'] != ""){
+									$proyectoDocumento = $this->Proyecto->ProyectoDocumento->findByProyectoId( $proyecto_id);
+									$this->Proyecto->ProyectoDocumento->id = $proyectoDocumento['ProyectoDocumento']['id'];
+									$this->Proyecto->ProyectoDocumento->saveField("documento", $this->data['ProyectoDocumento']['documento']);
+									#$this->Proyecto->ProyectoDocumento->saveField("documento_dir", (string)$this->data['ProyectoDocumento']['documento_dir']);
+									$this->Proyecto->ProyectoDocumento->saveField("documento_generico_id", $pauta_id);
+								}
+								$this->Session->setFlash("¡tus datos han sido modificados exitosamente!", "flash_success");
+	        		
+								$this->redirect(array('controller' => 'pages', 'action' => 'home'));
+							}else{
+								$this->data['ProyectoDocumento']['proyecto_id'] = $proyecto_id;
+								$this->Proyecto->ProyectoDocumento->create();
+								$this->Proyecto->ProyectoDocumento->save( $this->data );
+								$this->Proyecto->ProyectoDocumento->saveField("documento_generico_id", $pauta_id);
+								$this->Session->setFlash("¡tus datos han sido modificados exitosamente!", "flash_success");
+	        		
+								$this->redirect(array('controller' => 'pages', 'action' => 'home'));
+							}
+						break;
+						
+					case 3:
+						break;
 					default:
 						$this->Session->setFlash("Default action", "flash_warning");
         		$this->redirect(array('controller' => 'pages', 'action' => 'home'));
 						break;
 				}			
 			}
-		}
+		
 	}
 	
 	/**
@@ -154,25 +265,9 @@ class ProyectosController extends AppController {
 	 * @return Redirect
 	 */
 	function admin(){
-		$this->loadModel( 'Profesor' );
-		if ( $this->Auth->user() && $this->Profesor->findByRut( $this->Auth->user( 'rut' ) )){
-			$this->set('user', current($this->Auth->user()) );
 			
-			$this->loadModel( 'Propuesta' );
-			$this->loadModel( 'Estudiante' );
-			$this->layout = "connected";
-			$this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
-			$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
-																																												'Propuesta.estado_propuesta_id' => 11)) );
-			$this->set('propuestaCandidata', $propuestaCandidata);
 			
-			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){
-				
-				$this->set('profesor', current($this->Profesor->findByRut( $this->Auth->user( 'rut' ) )) );
-				$pendientes = $this->Estudiante->find('count', array('conditions' => array('Estudiante.estado' => 'pendiente')));
-				$ideasNuevas = $this->Propuesta->find('count', array('conditions' => array('Propuesta.estado_propuesta_id' => '10')));
-        $this->set('pendientes', $pendientes);
-        $this->set('nuevasIdeas', $ideasNuevas);
+			if ( $this->Profesor->findByRut( $this->Auth->user( 'rut' ) ) ){			
 
         $idPauta = $this->Proyecto->field('pauta_id');
         if( isset($idPauta) && $idPauta > 0 ){
@@ -210,10 +305,11 @@ class ProyectosController extends AppController {
         	}
         }
 			}			
-		}else{
-			$this->Session->setFlash("No puedes acceder acá", "flash_warning");
-      $this->redirect(array('controller' => 'pages', 'action' => 'home'));
-		}
+		
+	}
+
+	function index(){
+		$this->set('proyectos', $this->Proyecto->find('all'));
 	}
 }
 ?>

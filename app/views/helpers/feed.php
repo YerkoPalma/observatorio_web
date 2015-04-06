@@ -35,19 +35,30 @@ class FeedHelper extends AppHelper {
 
   	//Dependiendo del tipo de $action
   	//genero un $mensaje    
+    if ($action == "Proyecto"){
+      $linkPropuesta = $this->Html->link($data['nombre_proyecto'],array('controller' => 'proyectos', 'action' => 'pauta', 1, $data['id']));
+      $nombre = $data['nombre_proyecto'];
+    }else{
     $link = $this->Html->link($user['nombre'],array('controller' => 'users', 'action' => 'show', $user['id']));
-    $linkPropuesta = $this->Html->link($data['nombre_propuesta'],array('controller' => 'propuestas', 'action' => 'show', $data['id']));;
+    $linkPropuesta = $this->Html->link($data['nombre_propuesta'],array('controller' => 'propuestas', 'action' => 'show', $data['id']));
+    $nombre = $user['nombre'];
+    }
+    
 
     if ( $action == "Propuesta" ){
       $msg = $link . " Ha publicado una nueva propuesta.";
     } elseif ( $action == "Noticia" ){
       $msg = $link . " Reviso una noticia.";
     } elseif ( $action == "Proyecto" ){
-      $msg = "!Una de las propuestas de " . $link . " se ha convertido en proyecto!";
+      $msg = "¡Hay un nuevo proyecto!";
     }  
 
-    $avatar = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user['mail'] ) ) ) . "&s=40";
-    $nombre = $user['nombre'];
+    if ( $action == "Proyecto" ){
+      $avatar = APP_PATH . 'files/proyecto/logo/'. $data['id'].'/' . $data['logo'];
+    }else{
+      $avatar = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user['mail'] ) ) ) . "&s=40";
+    }
+    
     $timeAgo = $this->Time->timeAgoInWords($data['created']);    
     
 
@@ -114,13 +125,19 @@ class FeedHelper extends AppHelper {
             if ( isset($item['User']) ){
               $tmpUser = $item['User'];
             }else{
-              $tmpUser = array(                
-                  'nombre' => $item[0]['nombre'],
-                  'rut' => $item[0]['rut'],
-                  'mail' => $item[0]['mail'],
-                  'estado' => $item[0]['estado'],
-                  'id' => $item[0]['id']
-                );
+              if (isset($item['Estudiante'])){
+                $tmpUser = array();
+                foreach ($item['Estudiante'] as $estudiante) {
+                  $tmpStudent = array(
+                    'id' => $estudiante['id'],
+                    'nombre' => $estudiante['nombre'],
+                    'rut' => $estudiante['rut'],
+                    'mail' => $estudiante['mail'],
+                    'estado' => $estudiante['estado']
+                    );
+                  array_push($tmpUser, $tmpStudent);
+                }
+              }
             }
 
             array_push($feedSingle, $tmpUser);

@@ -18,7 +18,7 @@
 				$this->loadModel( 'Profesor' );
 				$this->loadModel( 'Propuesta' );
 				$this->loadModel( 'Estudiante' );
-				$this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
+				$this->set( 'estudiante', $this->Estudiante->findByRut( $this->Auth->user('rut') )); # !*
 				$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
 																																													'Propuesta.estado_propuesta_id' => 11)) );
 				$this->set('propuestaCandidata', $propuestaCandidata);

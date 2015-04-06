@@ -32,17 +32,20 @@
 						echo $html->link('Ideas', array('controller' => 'propuestas', 'action' => 'index'), array('class' => 'btn btn-default btn-block'));
 					}
 				?>
+				<?php if (isset($profesor) || isset($estudiante)):?>
+					<?php echo $html->link('Proyectos', array('controller' => 'proyectos', 'action' => 'index'), array('class' => 'btn btn-default btn-block'))?>	
+				<?php endif;?>
 				<?php if( trim( $user['estado'] ) == "pendiente" ): ?>
-					<?php echo $html->link('Proyecto', array('controller' => 'users', 'action' => 'project'), array('class' => 'btn btn-default btn-block', 'disabled' => 'disabled'))?>
+					<?php echo $html->link('Mi Proyecto', array('controller' => 'users', 'action' => 'project'), array('class' => 'btn btn-default btn-block', 'disabled' => 'disabled'))?>
 					<?php echo $html->link('Curso', array('controller' => 'propuestas', 'action' => 'index'), array('class' => 'btn btn-default btn-block', 'disabled' => 'disabled'))?>
 				<?php elseif( isset($profesor) ):?>	
 					<?php echo $html->link('Administrar Proyectos', array('controller' => 'proyectos', 'action' => 'admin'), array('class' => 'btn btn-default btn-block'))?>	
 					<?php echo $html->link('Curso', array('controller' => 'estudiantes', 'action' => 'curso'), array('class' => 'btn btn-default btn-block'))?>
 				<?php else: ?>
 					<?php if( isset($propuestaCandidata['Propuesta']) ):?>
-						<?php echo $html->link('Proyecto <span class="label label-primary">nuevo</span>', array('controller' => 'proyectos', 'action' => 'add',$propuestaCandidata['Propuesta']['id']), array('class' => 'btn btn-success btn-block','escape' => false))?>
+						<?php echo $html->link('Mi Proyecto <span class="label label-primary">nuevo</span>', array('controller' => 'proyectos', 'action' => 'add',$propuestaCandidata['Propuesta']['id']), array('class' => 'btn btn-success btn-block','escape' => false))?>
 					<?php elseif( isset($estudiante) && $estudiante['Estudiante']['proyecto_id'] != "" ):?>
-						<?php echo $html->link('Proyecto', array('controller' => 'proyectos', 'action' => 'pauta', $estudiante['Proyecto']['pauta_id'], $estudiante['Estudiante']['proyecto_id']), array('class' => 'btn btn-default btn-block'))?>												
+						<?php echo $html->link('Mi Proyecto', array('controller' => 'proyectos', 'action' => 'pauta', $estudiante['Proyecto']['pauta_id'], $estudiante['Estudiante']['proyecto_id']), array('class' => 'btn btn-default btn-block'))?>												
 			  	<?php endif;?>
 			  	<?php echo $html->link('Curso', array('controller' => 'estudiantes', 'action' => 'curso'), array('class' => 'btn btn-default btn-block'))?>
 			  <?php endif; ?>

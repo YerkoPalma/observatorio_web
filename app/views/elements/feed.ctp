@@ -1,5 +1,6 @@
 <?php echo $feed->startBlock($type);?>
 <?php $array = $feed->feedArray($feeds); ?>
+<!--<pre><?php print_r($array);?></pre>-->
 	<?php foreach ($array as $item): ?>
 		<?php echo $feed->activityHeader( $item[2], $item[0], $item[1] ); ?>
 		<?php if ($type == "social"):?>

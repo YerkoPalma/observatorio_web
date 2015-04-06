@@ -45,7 +45,7 @@
 				$this->layout = 'connected';
 
 				$this->set( 'estudiantes', $this->Estudiante->User->find( 'all', array( "conditions" => array("Estudiante.estado" => "activo")) ) );		
-				$this->set( 'estudiante', $this->Estudiante->findById( $this->Auth->user('id') ));
+				$this->set( 'estudiante', $this->Estudiante->findByRut( $this->Auth->user('rut') ));
 				$this->loadModel( 'Profesor' );
 				$this->loadModel( 'Propuesta' );
 				$propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),

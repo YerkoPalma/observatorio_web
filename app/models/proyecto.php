@@ -9,6 +9,9 @@ class Proyecto extends AppModel{
       'foreignKey' => 'proyecto_id'),
     'ProyectoDocumento' => array(
       'className' => 'ProyectoDocumento',
+      'foreignKey' => 'proyecto_id'),
+    'Mercado' => array(
+      'className' => 'Mercado',
       'foreignKey' => 'proyecto_id')
     );
   var $belongsTo = array(

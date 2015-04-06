@@ -252,6 +252,10 @@ li.dropdown .divider{
   vertical-align: top;
 }
 
+a.media-left{
+  max-width: 100px;
+}
+
 .feed .media-body p{
   vertical-align: bottom;
   margin: 0;
@@ -408,4 +412,49 @@ blockquote {
 .form.active .col-md-5 .form-group{
   margin-right: 0;
   margin-left: 0;
+}
+
+.panel-add{
+  min-height: 140px;
+  color: #3c763d;  
+}
+
+.mercado{
+  -webkit-transition: all 1s; /* Safari */
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+
+.mercado .form-group{
+  margin: 0;
+}
+.panel-add .panel-body{
+  text-align: center;
+  vertical-align: middle;
+  min-height: inherit;
+}
+
+.panel-add .panel-body:hover{
+  background: #ddd;  
+  box-shadow: 0px 1px 5px #2E9E30;
+  -webkit-box-shadow: 0px 1px 5px #2E9E30;
+}
+
+.panel-add .panel-body:active{
+  background: #3c763d;  
+  color: #fff;  
+  box-shadow: 0px 0px 0px #2E9E30;
+  -webkit-box-shadow: 0px 0px 0px #2E9E30;
+}
+
+.panel-add .glyphicon{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.glyphicon-class {
+  display: block;
+  text-align: center;
+  word-wrap: break-word;
 }
