@@ -146,7 +146,7 @@ class ComparadorComponent extends Object {
       'costs'           => 0.05,
       'revenuestreams'  => 0.1,     
     )
-    );
+  );
   //settings cambiara la configuracion de default
   private $settings = array();
 
@@ -210,10 +210,47 @@ class ComparadorComponent extends Object {
   }
 
   //Funcion que setea una de las opciones predefinidas
-  function set($option = array()){}
+  function set($option, $value){
+    try{
+      $this->default[$option] = $value;
+    }catch(Exception $e){
+      print_r($e->getMessage());
+    }
+  }
 
   //Funcion que setea un grupo de funciones predefinidas
-  function config($settings = array()){}
+  function config($settings){
+    /*
+      private $default = array(
+        "umbral" => 0.8,
+        "p" => 0.1,
+        "pesos" => array(
+          'descripcion'     => 0.2,
+          'partners'        => 0.1,
+          'activities'      => 0.05,
+          'resources'       => 0.1,
+          'propositions'    => 0.2,
+          'relationships'   => 0.05,
+          'channels'        => 0.05,
+          'segments'        => 0.1,
+          'costs'           => 0.05,
+          'revenuestreams'  => 0.1,     
+        )
+      );
+     */
+    if (isset($settings["umbral"]))
+      $this->default["umbral"] = $settings["umbral"];
+
+    if (isset($settings["p"]))
+      $this->default["p"] = $settings["p"];
+
+    if (isset($settings["pesos"]) && is_array($settings["pesos"])){
+      foreach ($this->default["pesos"] as $key => $value) {
+        if (isset($settings["pesos"][$key]))
+          $this->default["pesos"][$key] = $settings["pesos"][$key];
+      }
+    }
+  }
   
 }
 

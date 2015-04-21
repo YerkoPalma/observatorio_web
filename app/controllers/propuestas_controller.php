@@ -260,18 +260,22 @@ class PropuestasController extends AppController {
 		}
 	}
 
-		function aceptar($id){
-			#evito que me pida una vista para esta accion
-      $this->autoRender = false;
-      $propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
-																																													'Propuesta.estado_propuesta_id' => 11)) );
-				$this->set('propuestaCandidata', $propuestaCandidata);
-			$propuesta = $this->Propuesta->findById($id);
-			if( $propuesta['Propuesta']['estado_propuesta_id'] == 10 ){
-				$this->Propuesta->id = $id;
-				$this->Propuesta->saveField('estado_propuesta_id', 11);
-			}
-			$this->redirect(array('action' => 'comparar'));
+	function aceptar($id){
+		#evito que me pida una vista para esta accion
+    $this->autoRender = false;
+    $propuestaCandidata = $this->Propuesta->find( 'first', array('conditions' => array('Propuesta.user_id' => $this->Auth->user('id'),
+																																												'Propuesta.estado_propuesta_id' => 11)) );
+			$this->set('propuestaCandidata', $propuestaCandidata);
+		$propuesta = $this->Propuesta->findById($id);
+		if( $propuesta['Propuesta']['estado_propuesta_id'] == 10 ){
+			$this->Propuesta->id = $id;
+			$this->Propuesta->saveField('estado_propuesta_id', 11);
 		}
+		$this->redirect(array('action' => 'comparar'));
+	}
+
+	function avanzado($id){
+		
+	}
 }
 ?>
